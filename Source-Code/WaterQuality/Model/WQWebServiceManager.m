@@ -13,7 +13,7 @@
 @interface  WQWebServiceManager (Private)
 
 - (void)getListOfMeasurementsForLocation:(CLLocation *)location
-                             withinRadio:(double)radioInMeters
+                             withinRadio:(NSInteger)radioInMeters
                          resultLimitedTo:(NSInteger)limit
                          notificationKey:(NSString *)notificationKey
                         withCompletition:(WQMeasurementsResponse)measurementResponse;
@@ -79,7 +79,7 @@ static WQWebServiceManager *static_WebServiceManager = nil;
 }
 
 - (void)getListOfMeasurementsForLocation:(CLLocation *)location
-                             withinRadio:(double)radioInMeters
+                             withinRadio:(NSInteger)radioInMeters
                          resultLimitedTo:(NSInteger)limit
                         withCompletition:(WQMeasurementsResponse)measurementResponse
 {
@@ -91,7 +91,7 @@ static WQWebServiceManager *static_WebServiceManager = nil;
 }
 
 - (void)getListOfMeasurementsForLocation:(CLLocation *)location
-                             withinRadio:(double)radioInMeters
+                             withinRadio:(NSInteger)radioInMeters
                          resultLimitedTo:(NSInteger)limit
                          notificationKey:(NSString *)notificationKey
                         withCompletition:(WQMeasurementsResponse)measurementResponse
@@ -101,7 +101,7 @@ static WQWebServiceManager *static_WebServiceManager = nil;
     
     // GET /v1/measurements/<lat>/<long>/<distance>/
     
-    NSString *getCall = [NSString stringWithFormat:@"/v1/measurements/%f/%f/%f/",
+    NSString *getCall = [NSString stringWithFormat:@"/v1/measurements/%f/%f/%d/",
                          location.coordinate.latitude,
                          location.coordinate.longitude,
                          radioInMeters];
@@ -124,7 +124,7 @@ static WQWebServiceManager *static_WebServiceManager = nil;
                                 {
                                     resultingObject = response;
                                 }
-                                NSLog(@"Response %@. Error %@", response, error);
+                                NSLog(@"Response (%@) %@. Error %@", [response class], response, error);
                                 
                                 [[NSNotificationCenter defaultCenter] postNotificationName:notificationKey
                                                                                     object:self

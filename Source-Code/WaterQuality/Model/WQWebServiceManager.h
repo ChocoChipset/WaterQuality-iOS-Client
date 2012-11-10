@@ -27,7 +27,7 @@ typedef void (^WQMeasurementsResponse)(id responseObject, NSError *error);
                     withCompletition:(WQMeasurementsResponse)measurementResponse;
 
 - (void)getListOfMeasurementsForLocation:(CLLocation *)location
-                             withinRadio:(double)radioInMeters
+                             withinRadio:(NSInteger)radioInMeters
                          resultLimitedTo:(NSInteger)limit
                         withCompletition:(WQMeasurementsResponse)measurementResponse;
 
