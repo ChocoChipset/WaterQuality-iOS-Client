@@ -31,6 +31,7 @@
 		3AD6D0C4164E72A200AFECEC /* WQMeasurementsMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6D0C3164E72A200AFECEC /* WQMeasurementsMapViewController.m */; };
 		3AD6D0C9164E739500AFECEC /* WQMeasurementMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6D0C8164E739500AFECEC /* WQMeasurementMainViewController.m */; };
 		3AD6D0CC164E73AC00AFECEC /* WQMeasurementDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6D0CB164E73AC00AFECEC /* WQMeasurementDetailsViewController.m */; };
+		3AD6D0CF164E780600AFECEC /* SVHTTPWQClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6D0CE164E780600AFECEC /* SVHTTPWQClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,8 @@
 		3AD6D0C8164E739500AFECEC /* WQMeasurementMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQMeasurementMainViewController.m; sourceTree = "<group>"; };
 		3AD6D0CA164E73AC00AFECEC /* WQMeasurementDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQMeasurementDetailsViewController.h; sourceTree = "<group>"; };
 		3AD6D0CB164E73AC00AFECEC /* WQMeasurementDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQMeasurementDetailsViewController.m; sourceTree = "<group>"; };
+		3AD6D0CD164E780600AFECEC /* SVHTTPWQClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SVHTTPWQClient.h; path = WaterQuality/SVHTTPWQClient.h; sourceTree = SOURCE_ROOT; };
+		3AD6D0CE164E780600AFECEC /* SVHTTPWQClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SVHTTPWQClient.m; path = WaterQuality/SVHTTPWQClient.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +220,8 @@
 				3AD6D0AC164E6ACB00AFECEC /* SVHTTPClient.m */,
 				3AD6D0AD164E6ACB00AFECEC /* SVHTTPRequest.h */,
 				3AD6D0AE164E6ACB00AFECEC /* SVHTTPRequest.m */,
+				3AD6D0CD164E780600AFECEC /* SVHTTPWQClient.h */,
+				3AD6D0CE164E780600AFECEC /* SVHTTPWQClient.m */,
 			);
 			name = SVHTTPRequest;
 			path = ../Submodules/SVHTTP/SVHTTPRequest;
@@ -367,6 +372,7 @@
 				3AD6D0C4164E72A200AFECEC /* WQMeasurementsMapViewController.m in Sources */,
 				3AD6D0C9164E739500AFECEC /* WQMeasurementMainViewController.m in Sources */,
 				3AD6D0CC164E73AC00AFECEC /* WQMeasurementDetailsViewController.m in Sources */,
+				3AD6D0CF164E780600AFECEC /* SVHTTPWQClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
