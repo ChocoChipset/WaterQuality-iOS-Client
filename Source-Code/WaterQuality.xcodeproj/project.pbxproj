@@ -1,0 +1,497 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3AD6D05C164E5CD000AFECEC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD6D05B164E5CD000AFECEC /* UIKit.framework */; };
+		3AD6D05E164E5CD000AFECEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD6D05D164E5CD000AFECEC /* Foundation.framework */; };
+		3AD6D060164E5CD000AFECEC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD6D05F164E5CD000AFECEC /* CoreGraphics.framework */; };
+		3AD6D066164E5CD000AFECEC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3AD6D064164E5CD000AFECEC /* InfoPlist.strings */; };
+		3AD6D068164E5CD000AFECEC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6D067164E5CD000AFECEC /* main.m */; };
+		3AD6D06C164E5CD000AFECEC /* WQAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6D06B164E5CD000AFECEC /* WQAppDelegate.m */; };
+		3AD6D06E164E5CD000AFECEC /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD6D06D164E5CD000AFECEC /* Default.png */; };
+		3AD6D070164E5CD000AFECEC /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD6D06F164E5CD000AFECEC /* Default@2x.png */; };
+		3AD6D072164E5CD000AFECEC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD6D071164E5CD000AFECEC /* Default-568h@2x.png */; };
+		3AD6D075164E5CD000AFECEC /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AD6D073164E5CD000AFECEC /* MainStoryboard_iPhone.storyboard */; };
+		3AD6D078164E5CD000AFECEC /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AD6D076164E5CD000AFECEC /* MainStoryboard_iPad.storyboard */; };
+		3AD6D07B164E5CD000AFECEC /* WQFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6D07A164E5CD000AFECEC /* WQFirstViewController.m */; };
+		3AD6D07D164E5CD000AFECEC /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD6D07C164E5CD000AFECEC /* first.png */; };
+		3AD6D07F164E5CD000AFECEC /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD6D07E164E5CD000AFECEC /* first@2x.png */; };
+		3AD6D082164E5CD000AFECEC /* WQSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6D081164E5CD000AFECEC /* WQSecondViewController.m */; };
+		3AD6D084164E5CD000AFECEC /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD6D083164E5CD000AFECEC /* second.png */; };
+		3AD6D086164E5CD000AFECEC /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD6D085164E5CD000AFECEC /* second@2x.png */; };
+		3AD6D08E164E5CD100AFECEC /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD6D08D164E5CD100AFECEC /* SenTestingKit.framework */; };
+		3AD6D08F164E5CD100AFECEC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD6D05B164E5CD000AFECEC /* UIKit.framework */; };
+		3AD6D090164E5CD100AFECEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD6D05D164E5CD000AFECEC /* Foundation.framework */; };
+		3AD6D098164E5CD100AFECEC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3AD6D096164E5CD100AFECEC /* InfoPlist.strings */; };
+		3AD6D09B164E5CD100AFECEC /* WaterQualityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6D09A164E5CD100AFECEC /* WaterQualityTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3AD6D091164E5CD100AFECEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3AD6D04E164E5CD000AFECEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3AD6D056164E5CD000AFECEC;
+			remoteInfo = WaterQuality;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3AD6D057164E5CD000AFECEC /* WaterQuality.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaterQuality.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AD6D05B164E5CD000AFECEC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3AD6D05D164E5CD000AFECEC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3AD6D05F164E5CD000AFECEC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3AD6D063164E5CD000AFECEC /* WaterQuality-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WaterQuality-Info.plist"; sourceTree = "<group>"; };
+		3AD6D065164E5CD000AFECEC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3AD6D067164E5CD000AFECEC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3AD6D069164E5CD000AFECEC /* WaterQuality-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WaterQuality-Prefix.pch"; sourceTree = "<group>"; };
+		3AD6D06A164E5CD000AFECEC /* WQAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WQAppDelegate.h; sourceTree = "<group>"; };
+		3AD6D06B164E5CD000AFECEC /* WQAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WQAppDelegate.m; sourceTree = "<group>"; };
+		3AD6D06D164E5CD000AFECEC /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		3AD6D06F164E5CD000AFECEC /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		3AD6D071164E5CD000AFECEC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		3AD6D074164E5CD000AFECEC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		3AD6D077164E5CD000AFECEC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		3AD6D079164E5CD000AFECEC /* WQFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WQFirstViewController.h; sourceTree = "<group>"; };
+		3AD6D07A164E5CD000AFECEC /* WQFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WQFirstViewController.m; sourceTree = "<group>"; };
+		3AD6D07C164E5CD000AFECEC /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		3AD6D07E164E5CD000AFECEC /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		3AD6D080164E5CD000AFECEC /* WQSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WQSecondViewController.h; sourceTree = "<group>"; };
+		3AD6D081164E5CD000AFECEC /* WQSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WQSecondViewController.m; sourceTree = "<group>"; };
+		3AD6D083164E5CD000AFECEC /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		3AD6D085164E5CD000AFECEC /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		3AD6D08C164E5CD100AFECEC /* WaterQualityTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WaterQualityTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AD6D08D164E5CD100AFECEC /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		3AD6D095164E5CD100AFECEC /* WaterQualityTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WaterQualityTests-Info.plist"; sourceTree = "<group>"; };
+		3AD6D097164E5CD100AFECEC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3AD6D099164E5CD100AFECEC /* WaterQualityTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaterQualityTests.h; sourceTree = "<group>"; };
+		3AD6D09A164E5CD100AFECEC /* WaterQualityTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaterQualityTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3AD6D054164E5CD000AFECEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AD6D05C164E5CD000AFECEC /* UIKit.framework in Frameworks */,
+				3AD6D05E164E5CD000AFECEC /* Foundation.framework in Frameworks */,
+				3AD6D060164E5CD000AFECEC /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AD6D088164E5CD100AFECEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AD6D08E164E5CD100AFECEC /* SenTestingKit.framework in Frameworks */,
+				3AD6D08F164E5CD100AFECEC /* UIKit.framework in Frameworks */,
+				3AD6D090164E5CD100AFECEC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3AD6D04C164E5CD000AFECEC = {
+			isa = PBXGroup;
+			children = (
+				3AD6D061164E5CD000AFECEC /* WaterQuality */,
+				3AD6D093164E5CD100AFECEC /* WaterQualityTests */,
+				3AD6D05A164E5CD000AFECEC /* Frameworks */,
+				3AD6D058164E5CD000AFECEC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3AD6D058164E5CD000AFECEC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3AD6D057164E5CD000AFECEC /* WaterQuality.app */,
+				3AD6D08C164E5CD100AFECEC /* WaterQualityTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3AD6D05A164E5CD000AFECEC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3AD6D05B164E5CD000AFECEC /* UIKit.framework */,
+				3AD6D05D164E5CD000AFECEC /* Foundation.framework */,
+				3AD6D05F164E5CD000AFECEC /* CoreGraphics.framework */,
+				3AD6D08D164E5CD100AFECEC /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3AD6D061164E5CD000AFECEC /* WaterQuality */ = {
+			isa = PBXGroup;
+			children = (
+				3AD6D06A164E5CD000AFECEC /* WQAppDelegate.h */,
+				3AD6D06B164E5CD000AFECEC /* WQAppDelegate.m */,
+				3AD6D073164E5CD000AFECEC /* MainStoryboard_iPhone.storyboard */,
+				3AD6D076164E5CD000AFECEC /* MainStoryboard_iPad.storyboard */,
+				3AD6D079164E5CD000AFECEC /* WQFirstViewController.h */,
+				3AD6D07A164E5CD000AFECEC /* WQFirstViewController.m */,
+				3AD6D07C164E5CD000AFECEC /* first.png */,
+				3AD6D07E164E5CD000AFECEC /* first@2x.png */,
+				3AD6D080164E5CD000AFECEC /* WQSecondViewController.h */,
+				3AD6D081164E5CD000AFECEC /* WQSecondViewController.m */,
+				3AD6D083164E5CD000AFECEC /* second.png */,
+				3AD6D085164E5CD000AFECEC /* second@2x.png */,
+				3AD6D062164E5CD000AFECEC /* Supporting Files */,
+			);
+			path = WaterQuality;
+			sourceTree = "<group>";
+		};
+		3AD6D062164E5CD000AFECEC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3AD6D063164E5CD000AFECEC /* WaterQuality-Info.plist */,
+				3AD6D064164E5CD000AFECEC /* InfoPlist.strings */,
+				3AD6D067164E5CD000AFECEC /* main.m */,
+				3AD6D069164E5CD000AFECEC /* WaterQuality-Prefix.pch */,
+				3AD6D06D164E5CD000AFECEC /* Default.png */,
+				3AD6D06F164E5CD000AFECEC /* Default@2x.png */,
+				3AD6D071164E5CD000AFECEC /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3AD6D093164E5CD100AFECEC /* WaterQualityTests */ = {
+			isa = PBXGroup;
+			children = (
+				3AD6D099164E5CD100AFECEC /* WaterQualityTests.h */,
+				3AD6D09A164E5CD100AFECEC /* WaterQualityTests.m */,
+				3AD6D094164E5CD100AFECEC /* Supporting Files */,
+			);
+			path = WaterQualityTests;
+			sourceTree = "<group>";
+		};
+		3AD6D094164E5CD100AFECEC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3AD6D095164E5CD100AFECEC /* WaterQualityTests-Info.plist */,
+				3AD6D096164E5CD100AFECEC /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3AD6D056164E5CD000AFECEC /* WaterQuality */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AD6D09E164E5CD100AFECEC /* Build configuration list for PBXNativeTarget "WaterQuality" */;
+			buildPhases = (
+				3AD6D053164E5CD000AFECEC /* Sources */,
+				3AD6D054164E5CD000AFECEC /* Frameworks */,
+				3AD6D055164E5CD000AFECEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WaterQuality;
+			productName = WaterQuality;
+			productReference = 3AD6D057164E5CD000AFECEC /* WaterQuality.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3AD6D08B164E5CD100AFECEC /* WaterQualityTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AD6D0A1164E5CD100AFECEC /* Build configuration list for PBXNativeTarget "WaterQualityTests" */;
+			buildPhases = (
+				3AD6D087164E5CD100AFECEC /* Sources */,
+				3AD6D088164E5CD100AFECEC /* Frameworks */,
+				3AD6D089164E5CD100AFECEC /* Resources */,
+				3AD6D08A164E5CD100AFECEC /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3AD6D092164E5CD100AFECEC /* PBXTargetDependency */,
+			);
+			name = WaterQualityTests;
+			productName = WaterQualityTests;
+			productReference = 3AD6D08C164E5CD100AFECEC /* WaterQualityTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3AD6D04E164E5CD000AFECEC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = WQ;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = HackWAW;
+			};
+			buildConfigurationList = 3AD6D051164E5CD000AFECEC /* Build configuration list for PBXProject "WaterQuality" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3AD6D04C164E5CD000AFECEC;
+			productRefGroup = 3AD6D058164E5CD000AFECEC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3AD6D056164E5CD000AFECEC /* WaterQuality */,
+				3AD6D08B164E5CD100AFECEC /* WaterQualityTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3AD6D055164E5CD000AFECEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AD6D066164E5CD000AFECEC /* InfoPlist.strings in Resources */,
+				3AD6D06E164E5CD000AFECEC /* Default.png in Resources */,
+				3AD6D070164E5CD000AFECEC /* Default@2x.png in Resources */,
+				3AD6D072164E5CD000AFECEC /* Default-568h@2x.png in Resources */,
+				3AD6D075164E5CD000AFECEC /* MainStoryboard_iPhone.storyboard in Resources */,
+				3AD6D078164E5CD000AFECEC /* MainStoryboard_iPad.storyboard in Resources */,
+				3AD6D07D164E5CD000AFECEC /* first.png in Resources */,
+				3AD6D07F164E5CD000AFECEC /* first@2x.png in Resources */,
+				3AD6D084164E5CD000AFECEC /* second.png in Resources */,
+				3AD6D086164E5CD000AFECEC /* second@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AD6D089164E5CD100AFECEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AD6D098164E5CD100AFECEC /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3AD6D08A164E5CD100AFECEC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3AD6D053164E5CD000AFECEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AD6D068164E5CD000AFECEC /* main.m in Sources */,
+				3AD6D06C164E5CD000AFECEC /* WQAppDelegate.m in Sources */,
+				3AD6D07B164E5CD000AFECEC /* WQFirstViewController.m in Sources */,
+				3AD6D082164E5CD000AFECEC /* WQSecondViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AD6D087164E5CD100AFECEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AD6D09B164E5CD100AFECEC /* WaterQualityTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3AD6D092164E5CD100AFECEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3AD6D056164E5CD000AFECEC /* WaterQuality */;
+			targetProxy = 3AD6D091164E5CD100AFECEC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3AD6D064164E5CD000AFECEC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3AD6D065164E5CD000AFECEC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3AD6D073164E5CD000AFECEC /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3AD6D074164E5CD000AFECEC /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		3AD6D076164E5CD000AFECEC /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3AD6D077164E5CD000AFECEC /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		3AD6D096164E5CD100AFECEC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3AD6D097164E5CD100AFECEC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3AD6D09C164E5CD100AFECEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3AD6D09D164E5CD100AFECEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3AD6D09F164E5CD100AFECEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WaterQuality/WaterQuality-Prefix.pch";
+				INFOPLIST_FILE = "WaterQuality/WaterQuality-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3AD6D0A0164E5CD100AFECEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WaterQuality/WaterQuality-Prefix.pch";
+				INFOPLIST_FILE = "WaterQuality/WaterQuality-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		3AD6D0A2164E5CD100AFECEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WaterQuality.app/WaterQuality";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WaterQuality/WaterQuality-Prefix.pch";
+				INFOPLIST_FILE = "WaterQualityTests/WaterQualityTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		3AD6D0A3164E5CD100AFECEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WaterQuality.app/WaterQuality";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WaterQuality/WaterQuality-Prefix.pch";
+				INFOPLIST_FILE = "WaterQualityTests/WaterQualityTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3AD6D051164E5CD000AFECEC /* Build configuration list for PBXProject "WaterQuality" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AD6D09C164E5CD100AFECEC /* Debug */,
+				3AD6D09D164E5CD100AFECEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3AD6D09E164E5CD100AFECEC /* Build configuration list for PBXNativeTarget "WaterQuality" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AD6D09F164E5CD100AFECEC /* Debug */,
+				3AD6D0A0164E5CD100AFECEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3AD6D0A1164E5CD100AFECEC /* Build configuration list for PBXNativeTarget "WaterQualityTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AD6D0A2164E5CD100AFECEC /* Debug */,
+				3AD6D0A3164E5CD100AFECEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3AD6D04E164E5CD000AFECEC /* Project object */;
+}
