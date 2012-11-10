@@ -30,4 +30,5 @@ typedef void (^WQMeasurementsResponse)(id responseObject, NSError *error);
                          resultLimitedTo:(NSInteger)limit
                         withCompletition:(WQMeasurementsResponse)measurementResponse;
 
+
 @end

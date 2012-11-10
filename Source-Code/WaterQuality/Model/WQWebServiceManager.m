@@ -10,6 +10,17 @@
 #import "SVHTTPWQClient.h"  // SVHTTPWQClient should be used instead of SVHTTPClient
 
 
+@interface  WQWebServiceManager (Private)
+
+- (void)getListOfMeasurementsForLocation:(CLLocation *)location
+                             withinRadio:(double)radioInMeters
+                         resultLimitedTo:(NSInteger)limit
+                         notificationKey:(NSString *)notificationKey
+                        withCompletition:(WQMeasurementsResponse)measurementResponse;
+
+
+@end
+
 
 
 @implementation WQWebServiceManager
@@ -28,11 +39,10 @@
 - (void)getMeasurementForLocation:(CLLocation *)location
                  withCompletition:(WQMeasurementsResponse)measurementResponse
 {
-    self.locationPoint = location;
-    self.radio = kRADIO_BY_DEFAULT;
     [self getListOfMeasurementsForLocation:location
                                withinRadio:kRADIO_BY_DEFAULT
                            resultLimitedTo:1
+                           notificationKey:K_NOTIFICATION_MEASHUREMENT_FOR_LOCATION_COMPLETE
                           withCompletition:measurementResponse];
    
 }
@@ -48,12 +58,28 @@
                          resultLimitedTo:(NSInteger)limit
                         withCompletition:(WQMeasurementsResponse)measurementResponse
 {
+    [self getListOfMeasurementsForLocation:location
+                               withinRadio:radioInMeters
+                           resultLimitedTo:limit
+                           notificationKey:K_NOTIFICATION_MEASHUREMENTS_LIST_COMPLETE
+                          withCompletition:measurementResponse];
+}
+
+- (void)getListOfMeasurementsForLocation:(CLLocation *)location
+                             withinRadio:(double)radioInMeters
+                         resultLimitedTo:(NSInteger)limit
+                         notificationKey:(NSString *)notificationKey
+                        withCompletition:(WQMeasurementsResponse)measurementResponse
+{
+    self.locationPoint = location;
+    self.radio = kRADIO_BY_DEFAULT;
+    
     // GET /v1/measurements/<lat>/<long>/<distance>/
     
     NSString *getCall = [NSString stringWithFormat:@"/v1/measurements/%f/%f/%f/",
-                        location.coordinate.latitude,
-                        location.coordinate.longitude,
-                        radioInMeters];
+                         location.coordinate.latitude,
+                         location.coordinate.longitude,
+                         radioInMeters];
     
     NSArray *parameterKeys = [NSArray arrayWithObjects:kPARAMETER_KEY_FOR_OFFSET, kPARAMETER_KEY_FOR_LIMIT, nil];
     
@@ -64,15 +90,26 @@
                                                                      forKeys:parameterKeys];
     
     [[SVHTTPWQClient sharedClient] GET:getCall
-                          parameters:parametersDictionary
-                          completion:^(id response, NSHTTPURLResponse *urlResponse, NSError *error) {
-//                            [[NSNotificationCenter defaultCenter] postNotificationName:@"TestNotification
-//                                                                                object:self];
-                          
-                          
-                          }];
+                            parameters:parametersDictionary
+                            completion:^(id response, NSHTTPURLResponse *urlResponse, NSError *error) {
+                                
+                                if (!error)
+                                {
+                                    [[NSNotificationCenter defaultCenter] postNotificationName:notificationKey
+                                                                                        object:response];
+                                }
+                                else
+                                {
+                                    [[NSNotificationCenter defaultCenter] postNotificationName:notificationKey
+                                                                                        object:nil];
+                                }
+                                    
+                                
+                                
+                            }];
     
 }
+
 
 - (void)dealloc
 {
