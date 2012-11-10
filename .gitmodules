@@ -1,0 +1,3 @@
+[submodule "Submodules/SVHTTP"]
+	path = Submodules/SVHTTP
+	url = git://github.com/samvermette/SVHTTPRequest.git
