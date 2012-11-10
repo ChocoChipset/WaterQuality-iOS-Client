@@ -19,7 +19,7 @@
     if (self = [super init])
     {
         self.radio = kRADIO_BY_DEFAULT;
-        self.locationPoint = [[CLLocation alloc] initWithLatitude:kDEFAULT_LATITUDE_ longitude:kDEFAULT_LONGITUDE_];
+        _locationPoint = [[CLLocation alloc] initWithLatitude:kDEFAULT_LATITUDE_ longitude:kDEFAULT_LONGITUDE_];
     }
     return self;
 }
@@ -48,6 +48,12 @@
                          resultLimitedTo:(NSInteger)limit
                         withCompletition:(WQMeasurementsResponse)measurementResponse
 {
+    
+    [[SVHTTPClient sharedClient] GET:@"users/show.json"
+                          parameters:[NSDictionary dictionaryWithObject:@"samvermette" forKey:@"screen_name"]
+                          completion:^(id response, NSHTTPURLResponse *urlResponse, NSError *error) {
+                              followersLabel.text = [NSString stringWithFormat:@"@samvermette has %@ followers", [response valueForKey:@"followers_count"]];
+                          }];
     
 }
 

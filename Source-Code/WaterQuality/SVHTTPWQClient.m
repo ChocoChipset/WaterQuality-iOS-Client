@@ -19,7 +19,7 @@
     if (self)
     {
         self.sendParametersAsJSON = YES;
-        self.basePath = kWEB_SERVICE_BASE_PATH;
+        self.basePath = kWEB_SERVICE_BASE_URL;
     }
     
     return self;
