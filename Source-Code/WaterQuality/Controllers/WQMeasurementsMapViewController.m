@@ -35,4 +35,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)dealloc {
+    [_map release];
+    [super dealloc];
+}
 @end
