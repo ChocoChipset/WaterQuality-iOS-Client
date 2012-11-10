@@ -27,10 +27,11 @@
 		3AD6D0AF164E6ACB00AFECEC /* SVHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6D0AC164E6ACB00AFECEC /* SVHTTPClient.m */; };
 		3AD6D0B0164E6ACB00AFECEC /* SVHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6D0AE164E6ACB00AFECEC /* SVHTTPRequest.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		3AD6D0BD164E723200AFECEC /* WQMeasurementsFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6D0BC164E723200AFECEC /* WQMeasurementsFilterViewController.m */; };
-		3AD6D0C1164E728300AFECEC /* WQMeasurementsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6D0C0164E728300AFECEC /* WQMeasurementsTableViewController.m */; };
+		3AD6D0C1164E728300AFECEC /* WQMeasurementsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6D0C0164E728300AFECEC /* WQMeasurementsListViewController.m */; };
 		3AD6D0C4164E72A200AFECEC /* WQMeasurementsMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6D0C3164E72A200AFECEC /* WQMeasurementsMapViewController.m */; };
 		3AD6D0C9164E739500AFECEC /* WQMeasurementMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6D0C8164E739500AFECEC /* WQMeasurementMainViewController.m */; };
 		3AD6D0CC164E73AC00AFECEC /* WQMeasurementDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6D0CB164E73AC00AFECEC /* WQMeasurementDetailsViewController.m */; };
+		3AD6D0CF164E780600AFECEC /* SVHTTPWQClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6D0CE164E780600AFECEC /* SVHTTPWQClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,14 +73,17 @@
 		3AD6D0AE164E6ACB00AFECEC /* SVHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVHTTPRequest.m; sourceTree = "<group>"; };
 		3AD6D0BB164E723200AFECEC /* WQMeasurementsFilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQMeasurementsFilterViewController.h; sourceTree = "<group>"; };
 		3AD6D0BC164E723200AFECEC /* WQMeasurementsFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQMeasurementsFilterViewController.m; sourceTree = "<group>"; };
-		3AD6D0BF164E728300AFECEC /* WQMeasurementsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQMeasurementsTableViewController.h; sourceTree = "<group>"; };
-		3AD6D0C0164E728300AFECEC /* WQMeasurementsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQMeasurementsTableViewController.m; sourceTree = "<group>"; };
+		3AD6D0BF164E728300AFECEC /* WQMeasurementsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQMeasurementsListViewController.h; sourceTree = "<group>"; };
+		3AD6D0C0164E728300AFECEC /* WQMeasurementsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQMeasurementsListViewController.m; sourceTree = "<group>"; };
 		3AD6D0C2164E72A200AFECEC /* WQMeasurementsMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQMeasurementsMapViewController.h; sourceTree = "<group>"; };
 		3AD6D0C3164E72A200AFECEC /* WQMeasurementsMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQMeasurementsMapViewController.m; sourceTree = "<group>"; };
 		3AD6D0C7164E739500AFECEC /* WQMeasurementMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQMeasurementMainViewController.h; sourceTree = "<group>"; };
 		3AD6D0C8164E739500AFECEC /* WQMeasurementMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQMeasurementMainViewController.m; sourceTree = "<group>"; };
 		3AD6D0CA164E73AC00AFECEC /* WQMeasurementDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQMeasurementDetailsViewController.h; sourceTree = "<group>"; };
 		3AD6D0CB164E73AC00AFECEC /* WQMeasurementDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQMeasurementDetailsViewController.m; sourceTree = "<group>"; };
+		3AD6D0CD164E780600AFECEC /* SVHTTPWQClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SVHTTPWQClient.h; path = WaterQuality/SVHTTPWQClient.h; sourceTree = SOURCE_ROOT; };
+		3AD6D0CE164E780600AFECEC /* SVHTTPWQClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SVHTTPWQClient.m; path = WaterQuality/SVHTTPWQClient.m; sourceTree = SOURCE_ROOT; };
+		3AD6D0DC164E7B6B00AFECEC /* WQConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQConstants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +169,7 @@
 				3AD6D073164E5CD000AFECEC /* MainStoryboard_iPhone.storyboard */,
 				3AD6D076164E5CD000AFECEC /* MainStoryboard_iPad.storyboard */,
 				3AD6D062164E5CD000AFECEC /* Supporting Files */,
+				3AD6D0DC164E7B6B00AFECEC /* WQConstants.h */,
 			);
 			path = WaterQuality;
 			sourceTree = "<group>";
@@ -217,6 +222,8 @@
 				3AD6D0AC164E6ACB00AFECEC /* SVHTTPClient.m */,
 				3AD6D0AD164E6ACB00AFECEC /* SVHTTPRequest.h */,
 				3AD6D0AE164E6ACB00AFECEC /* SVHTTPRequest.m */,
+				3AD6D0CD164E780600AFECEC /* SVHTTPWQClient.h */,
+				3AD6D0CE164E780600AFECEC /* SVHTTPWQClient.m */,
 			);
 			name = SVHTTPRequest;
 			path = ../Submodules/SVHTTP/SVHTTPRequest;
@@ -227,8 +234,8 @@
 			children = (
 				3AD6D0BB164E723200AFECEC /* WQMeasurementsFilterViewController.h */,
 				3AD6D0BC164E723200AFECEC /* WQMeasurementsFilterViewController.m */,
-				3AD6D0BF164E728300AFECEC /* WQMeasurementsTableViewController.h */,
-				3AD6D0C0164E728300AFECEC /* WQMeasurementsTableViewController.m */,
+				3AD6D0BF164E728300AFECEC /* WQMeasurementsListViewController.h */,
+				3AD6D0C0164E728300AFECEC /* WQMeasurementsListViewController.m */,
 				3AD6D0C2164E72A200AFECEC /* WQMeasurementsMapViewController.h */,
 				3AD6D0C3164E72A200AFECEC /* WQMeasurementsMapViewController.m */,
 			);
@@ -363,10 +370,11 @@
 				3AD6D0AF164E6ACB00AFECEC /* SVHTTPClient.m in Sources */,
 				3AD6D0B0164E6ACB00AFECEC /* SVHTTPRequest.m in Sources */,
 				3AD6D0BD164E723200AFECEC /* WQMeasurementsFilterViewController.m in Sources */,
-				3AD6D0C1164E728300AFECEC /* WQMeasurementsTableViewController.m in Sources */,
+				3AD6D0C1164E728300AFECEC /* WQMeasurementsListViewController.m in Sources */,
 				3AD6D0C4164E72A200AFECEC /* WQMeasurementsMapViewController.m in Sources */,
 				3AD6D0C9164E739500AFECEC /* WQMeasurementMainViewController.m in Sources */,
 				3AD6D0CC164E73AC00AFECEC /* WQMeasurementDetailsViewController.m in Sources */,
+				3AD6D0CF164E780600AFECEC /* SVHTTPWQClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

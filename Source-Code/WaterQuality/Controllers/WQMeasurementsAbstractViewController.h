@@ -1,5 +1,5 @@
 //
-//  WQMeasurementsTableViewController.h
+//  WQMeasurementsAbstractViewController.h
 //  WaterQuality
 //
 //  Created by Hector Zarate on 11/10/12.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WQMeasurementsTableViewController : UITableViewController
+@interface WQMeasurementsAbstractViewController : UIViewController
 
 @end
