@@ -20,16 +20,13 @@ typedef void (^WQMeasurementsResponse)(id responseObject, NSError *error);
 
 +(id)sharedWebServiceManager;
 
-- (void)getMeasurementForLocation:(CLLocation *)location
-                 withCompletition:(WQMeasurementsResponse)measurementResponse;
+- (void)getMeasurementForLocation:(CLLocation *)location;
 
-- (void)getParameterForMeasurementID:(long)measurement
-                    withCompletition:(WQMeasurementsResponse)measurementResponse;
+- (void)getParameterForMeasurementID:(long)measurement;
 
 - (void)getListOfMeasurementsForLocation:(CLLocation *)location
                              withinRadio:(NSInteger)radioInMeters
-                         resultLimitedTo:(NSInteger)limit
-                        withCompletition:(WQMeasurementsResponse)measurementResponse;
+                         resultLimitedTo:(NSInteger)limit;
 
 
 @end
