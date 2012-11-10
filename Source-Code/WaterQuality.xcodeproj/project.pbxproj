@@ -29,8 +29,8 @@
 		3AD6D090164E5CD100AFECEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD6D05D164E5CD000AFECEC /* Foundation.framework */; };
 		3AD6D098164E5CD100AFECEC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3AD6D096164E5CD100AFECEC /* InfoPlist.strings */; };
 		3AD6D09B164E5CD100AFECEC /* WaterQualityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6D09A164E5CD100AFECEC /* WaterQualityTests.m */; };
-		3AD6D0AF164E6ACB00AFECEC /* SVHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6D0AC164E6ACB00AFECEC /* SVHTTPClient.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		3AD6D0B0164E6ACB00AFECEC /* SVHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6D0AE164E6ACB00AFECEC /* SVHTTPRequest.m */; };
+		3AD6D0AF164E6ACB00AFECEC /* SVHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6D0AC164E6ACB00AFECEC /* SVHTTPClient.m */; };
+		3AD6D0B0164E6ACB00AFECEC /* SVHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6D0AE164E6ACB00AFECEC /* SVHTTPRequest.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		3AD6D0BD164E723200AFECEC /* WQMeasurementsFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6D0BC164E723200AFECEC /* WQMeasurementsFilterViewController.m */; };
 		3AD6D0C1164E728300AFECEC /* WQMeasurementsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6D0C0164E728300AFECEC /* WQMeasurementsTableViewController.m */; };
 		3AD6D0C4164E72A200AFECEC /* WQMeasurementsMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6D0C3164E72A200AFECEC /* WQMeasurementsMapViewController.m */; };
