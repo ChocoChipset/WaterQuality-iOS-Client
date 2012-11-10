@@ -7,6 +7,7 @@
 //
 
 #import "WQMeasurementsMapViewController.h"
+#import "WQWebServiceManager.h"
 
 @interface WQMeasurementsMapViewController ()
 
@@ -26,8 +27,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    self.map.delegate = self;
+    [self.map setCenterCoordinate:CLLocationCoordinate2DMake(kDEFAULT_LATITUDE_, kDEFAULT_LONGITUDE_) animated:NO];
+    [self.map setRegion:MKCoordinateRegionMake(self.map.centerCoordinate, MKCoordinateSpanMake(10, 10))];
 }
+
+
 
 - (void)didReceiveMemoryWarning
 {

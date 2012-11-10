@@ -10,7 +10,7 @@
 #import <MapKit/MapKit.h>
 #import "WQMeasurementsAbstractViewController.h"
 
-@interface WQMeasurementsMapViewController : WQMeasurementsAbstractViewController
+@interface WQMeasurementsMapViewController : WQMeasurementsAbstractViewController <MKMapViewDelegate>
 
 
 @property (retain, nonatomic) IBOutlet MKMapView *map;

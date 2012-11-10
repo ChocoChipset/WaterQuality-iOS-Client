@@ -44,7 +44,7 @@ static WQWebServiceManager *static_WebServiceManager = nil;
     
     if (self = [super init])
     {
-        self.radio = kRADIO_BY_DEFAULT;
+        self.radio = kRADIO_BY_DEFAULT_DEGREE;
         _locationPoint = [[CLLocation alloc] initWithLatitude:kDEFAULT_LATITUDE_ longitude:kDEFAULT_LONGITUDE_];
     }
     return self;
@@ -55,7 +55,7 @@ static WQWebServiceManager *static_WebServiceManager = nil;
                  withCompletition:(WQMeasurementsResponse)measurementResponse
 {
     [self getListOfMeasurementsForLocation:location
-                               withinRadio:kRADIO_BY_DEFAULT
+                               withinRadio:kRADIO_BY_DEFAULT_DEGREE
                            resultLimitedTo:1
                            notificationKey:K_NOTIFICATION_MEASHUREMENT_FOR_LOCATION_COMPLETE
                           withCompletition:measurementResponse];
@@ -97,7 +97,7 @@ static WQWebServiceManager *static_WebServiceManager = nil;
                         withCompletition:(WQMeasurementsResponse)measurementResponse
 {
     self.locationPoint = location;
-    self.radio = kRADIO_BY_DEFAULT;
+    self.radio = kRADIO_BY_DEFAULT_DEGREE;
     
     // GET /v1/measurements/<lat>/<long>/<distance>/
     
