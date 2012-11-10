@@ -41,11 +41,6 @@
 }
 
 - (void)dealloc {
-    [_iconImageView release];
-    [_persentLabel release];
-    [_placeNameLabel release];
-    [_descriptionTextView release];
-    [_qualityStripesView release];
     [super dealloc];
 }
 @end

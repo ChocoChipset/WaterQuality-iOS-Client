@@ -108,7 +108,7 @@ static WQWebServiceManager *static_WebServiceManager = nil;
     
     NSArray *parameterKeys = [NSArray arrayWithObjects:kPARAMETER_KEY_FOR_OFFSET, kPARAMETER_KEY_FOR_LIMIT, nil];
     
-    NSArray *parameterValues = [NSArray arrayWithObjects:0, kDEFAULT_LIMIT_FOR_MEASUREMENTS, nil];
+    NSArray *parameterValues = [NSArray arrayWithObjects:@"0", kDEFAULT_LIMIT_FOR_MEASUREMENTS, nil];
     
     
     NSDictionary *parametersDictionary = [NSDictionary dictionaryWithObjects:parameterValues
@@ -118,17 +118,18 @@ static WQWebServiceManager *static_WebServiceManager = nil;
                             parameters:parametersDictionary
                             completion:^(id response, NSHTTPURLResponse *urlResponse, NSError *error) {
                                 
+                                id resultingObject = nil;
+                                
                                 if (!error)
                                 {
-                                    [[NSNotificationCenter defaultCenter] postNotificationName:notificationKey
-                                                                                        object:response];
+                                    resultingObject = response;
                                 }
-                                else
-                                {
-                                    [[NSNotificationCenter defaultCenter] postNotificationName:notificationKey
-                                                                                        object:nil];
-                                }
-                                    
+                                NSLog(@"Response %@. Error %@", response, error);
+                                
+                                [[NSNotificationCenter defaultCenter] postNotificationName:notificationKey
+                                                                                    object:self
+                                                                                  userInfo:resultingObject];
+                                
                                 
                                 
                             }];

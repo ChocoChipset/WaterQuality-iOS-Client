@@ -35,5 +35,5 @@
 #define kPARAMETER_KEY_FOR_OFFSET @"offset"
 #define kPARAMETER_KEY_FOR_LIMIT @"limit"
 
-#define kDEFAULT_LIMIT_FOR_MEASUREMENTS 35
+#define kDEFAULT_LIMIT_FOR_MEASUREMENTS @"35"
 /* ------------------------------------------------------------------------- */
