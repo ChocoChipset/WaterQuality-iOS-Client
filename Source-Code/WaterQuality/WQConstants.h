@@ -20,3 +20,9 @@
 #define kDEFAULT_LONGITUDE_ 21.0122
 /* ------------------------------------------------------------------------- */
 
+//Notofication defines
+/* ------------------------------------------------------------------------- */
+#define K_NOTIFICATION_MEASHUREMENT_FOR_LOCATION_COMPLETE @"locationComplet"
+#define K_NOTIFICATION_MEASHUREMENT_PARAMETERFOR_LOCATION_COMPLETE @"locationParameterComplete"
+#define K_NOTIFICATION_MEASHUREMENTS_LIST_COMPLETE @"locationListComplete"
+/* ------------------------------------------------------------------------- */
