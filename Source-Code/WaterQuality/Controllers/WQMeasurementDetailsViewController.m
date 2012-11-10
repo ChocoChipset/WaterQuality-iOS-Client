@@ -29,6 +29,11 @@
 	// Do any additional setup after loading the view.
 }
 
+- (void)viewDidDisappear:(BOOL)animated
+{
+    
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

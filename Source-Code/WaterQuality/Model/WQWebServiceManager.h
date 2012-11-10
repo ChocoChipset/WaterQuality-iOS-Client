@@ -7,11 +7,27 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
 
+typedef void (^WQMeasurementsResponse)(id responseObject, NSError *error);
 
 @interface WQWebServiceManager : NSObject
 
+@property (assign, nonatomic) double radio;
+@property (strong, nonatomic) CLLocation *locationPoint;
+@property (strong, nonatomic) NSMutableArray *measurements;
+@property (strong, nonatomic) NSDictionary *parameters;
 
 
+- (void)getMeasurementForLocation:(CLLocation *)location
+                 withCompletition:(WQMeasurementsResponse)measurementResponse;
+
+- (void)getParameterForMeasurementID:(NSInteger)measurement
+                    withCompletition:(WQMeasurementsResponse)measurementResponse;
+
+- (void)getListOfMeasurementsForLocation:(CLLocation *)location
+                             withinRadio:(double)radioInMeters
+                         resultLimitedTo:(NSInteger)limit
+                        withCompletition:(WQMeasurementsResponse)measurementResponse;
 
 @end

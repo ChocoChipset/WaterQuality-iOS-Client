@@ -80,12 +80,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PhZ-ul-gZl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1155" y="1054"/>
+            <point key="canvasLocation" x="1131" y="1054"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="cZ8-JB-Ab8">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="B8N-hF-zD8" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="ADU-w0-0gP" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="0EV-Uf-acU">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
@@ -109,6 +108,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="H3p-lp-pCp"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B8N-hF-zD8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1549" y="1054"/>
         </scene>
@@ -199,7 +199,7 @@
         <scene sceneID="Is0-4H-zsO">
             <objects>
                 <tabBarController definesPresentationContext="YES" id="nID-Et-L9K" sceneMemberID="viewController">
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="2hj-wV-r33">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -215,30 +215,6 @@
             <point key="canvasLocation" x="-63" y="1336"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="WQMeasurementDetailsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WQMeasurementDetailsViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="descriptionTextView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="iconImageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="persentLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="placeNameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="qualityStripesView" candidateClass="UIView"/>
-            </relationships>
-        </class>
-        <class className="WQMeasurementsListViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WQMeasurementsListViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="WQMeasurementsMapViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WQMeasurementsMapViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="map" candidateClass="MKMapView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

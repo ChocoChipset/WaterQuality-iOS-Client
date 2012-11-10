@@ -10,8 +10,54 @@
 #import "SVHTTPWQClient.h"  // SVHTTPWQClient should be used instead of SVHTTPClient
 
 
+
+
 @implementation WQWebServiceManager
 
+- (id)init
+{
+    if (self = [super init])
+    {
+        self.radio = kRADIO_BY_DEFAULT;
+        self.locationPoint = [[CLLocation alloc] initWithLatitude:kDEFAULT_LATITUDE_ longitude:kDEFAULT_LONGITUDE_];
+    }
+    return self;
+}
+
+
+- (void)getMeasurementForLocation:(CLLocation *)location
+                 withCompletition:(WQMeasurementsResponse)measurementResponse
+{
+    self.locationPoint = location;
+    self.radio = kRADIO_BY_DEFAULT;
+    [self getListOfMeasurementsForLocation:location
+                               withinRadio:kRADIO_BY_DEFAULT
+                           resultLimitedTo:1
+                          withCompletition:measurementResponse];
+   
+}
+
+- (void)getParameterForMeasurementID:(NSInteger)measurement
+                    withCompletition:(WQMeasurementsResponse)measurementResponse
+{
+    []
+}
+
+- (void)getListOfMeasurementsForLocation:(CLLocation *)location
+                             withinRadio:(double)radioInMeters
+                         resultLimitedTo:(NSInteger)limit
+                        withCompletition:(WQMeasurementsResponse)measurementResponse
+{
+    
+}
+
+- (void)dealloc
+{
+    [_locationPoint release];
+    [_measurements release];
+    [_parameters release];
+    [super dealloc];
+}
 
 
 @end
