@@ -22,11 +22,26 @@
 @end
 
 
+static WQWebServiceManager *static_WebServiceManager = nil;
 
 @implementation WQWebServiceManager
 
++(id)sharedWebServiceManager
+{
+    if (static_WebServiceManager)
+    {
+        return static_WebServiceManager;
+    }
+    else
+    {
+        return [[[self class] alloc] init];
+    }
+}
+
 - (id)init
 {
+    if (static_WebServiceManager) return [static_WebServiceManager retain];
+    
     if (self = [super init])
     {
         self.radio = kRADIO_BY_DEFAULT;

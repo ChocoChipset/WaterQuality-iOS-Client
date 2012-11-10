@@ -18,6 +18,7 @@ typedef void (^WQMeasurementsResponse)(id responseObject, NSError *error);
 @property (strong, nonatomic) NSMutableArray *measurements;
 @property (strong, nonatomic) NSDictionary *parameters;
 
++(id)sharedWebServiceManager;
 
 - (void)getMeasurementForLocation:(CLLocation *)location
                  withCompletition:(WQMeasurementsResponse)measurementResponse;

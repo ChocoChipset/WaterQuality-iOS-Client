@@ -7,6 +7,9 @@
 //
 
 #import "WQMeasurementMainViewController.h"
+#import "WQWebServiceManager.h"
+
+
 
 @interface WQMeasurementMainViewController ()
 
@@ -26,6 +29,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    WQWebServiceManager
+    
 	// Do any additional setup after loading the view.
 }
 
