@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WQMeasurementsAbstractViewController.h"
 
-@interface WQMeasurementsMapViewController : UIViewController
+@interface WQMeasurementsMapViewController : WQMeasurementsAbstractViewController
 
 @end

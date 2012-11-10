@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WQMeasurementsAbstractViewController.h"
 
-@interface WQMeasurementsListViewController : UIViewController
+@interface WQMeasurementsListViewController : WQMeasurementsAbstractViewController
 
 @property (nonatomic, retain) IBOutlet UITableView *tableView;
 

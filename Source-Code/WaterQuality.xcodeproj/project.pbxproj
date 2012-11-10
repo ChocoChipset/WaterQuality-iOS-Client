@@ -32,6 +32,7 @@
 		3AD6D0C9164E739500AFECEC /* WQMeasurementMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6D0C8164E739500AFECEC /* WQMeasurementMainViewController.m */; };
 		3AD6D0CC164E73AC00AFECEC /* WQMeasurementDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6D0CB164E73AC00AFECEC /* WQMeasurementDetailsViewController.m */; };
 		3AD6D0CF164E780600AFECEC /* SVHTTPWQClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6D0CE164E780600AFECEC /* SVHTTPWQClient.m */; };
+		3AD6D0E0164E820500AFECEC /* WQMeasurementsAbstractViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6D0DF164E820400AFECEC /* WQMeasurementsAbstractViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,8 @@
 		3AD6D0CD164E780600AFECEC /* SVHTTPWQClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SVHTTPWQClient.h; path = WaterQuality/SVHTTPWQClient.h; sourceTree = SOURCE_ROOT; };
 		3AD6D0CE164E780600AFECEC /* SVHTTPWQClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SVHTTPWQClient.m; path = WaterQuality/SVHTTPWQClient.m; sourceTree = SOURCE_ROOT; };
 		3AD6D0DC164E7B6B00AFECEC /* WQConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQConstants.h; sourceTree = "<group>"; };
+		3AD6D0DE164E820400AFECEC /* WQMeasurementsAbstractViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQMeasurementsAbstractViewController.h; sourceTree = "<group>"; };
+		3AD6D0DF164E820400AFECEC /* WQMeasurementsAbstractViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQMeasurementsAbstractViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +241,8 @@
 				3AD6D0C0164E728300AFECEC /* WQMeasurementsListViewController.m */,
 				3AD6D0C2164E72A200AFECEC /* WQMeasurementsMapViewController.h */,
 				3AD6D0C3164E72A200AFECEC /* WQMeasurementsMapViewController.m */,
+				3AD6D0DE164E820400AFECEC /* WQMeasurementsAbstractViewController.h */,
+				3AD6D0DF164E820400AFECEC /* WQMeasurementsAbstractViewController.m */,
 			);
 			name = Measurements;
 			sourceTree = "<group>";
@@ -375,6 +380,7 @@
 				3AD6D0C9164E739500AFECEC /* WQMeasurementMainViewController.m in Sources */,
 				3AD6D0CC164E73AC00AFECEC /* WQMeasurementDetailsViewController.m in Sources */,
 				3AD6D0CF164E780600AFECEC /* SVHTTPWQClient.m in Sources */,
+				3AD6D0E0164E820500AFECEC /* WQMeasurementsAbstractViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
