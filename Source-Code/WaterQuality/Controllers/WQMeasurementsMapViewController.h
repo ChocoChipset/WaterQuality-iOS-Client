@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
 @interface WQMeasurementsMapViewController : UIViewController
+@property (retain, nonatomic) IBOutlet MKMapView *map;
 
 @end
