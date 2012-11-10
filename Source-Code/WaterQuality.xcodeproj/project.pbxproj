@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		159E2D83164E79660087CA15 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 159E2D82164E79660087CA15 /* MapKit.framework */; };
+		159E2D95164EB0530087CA15 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 159E2D94164EB0530087CA15 /* CoreLocation.framework */; };
 		3AD6D05C164E5CD000AFECEC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD6D05B164E5CD000AFECEC /* UIKit.framework */; };
 		3AD6D05E164E5CD000AFECEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD6D05D164E5CD000AFECEC /* Foundation.framework */; };
 		3AD6D060164E5CD000AFECEC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD6D05F164E5CD000AFECEC /* CoreGraphics.framework */; };
@@ -48,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		159E2D82164E79660087CA15 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		159E2D94164EB0530087CA15 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3AD6D057164E5CD000AFECEC /* WaterQuality.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaterQuality.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AD6D05B164E5CD000AFECEC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3AD6D05D164E5CD000AFECEC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -97,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				159E2D95164EB0530087CA15 /* CoreLocation.framework in Frameworks */,
 				159E2D83164E79660087CA15 /* MapKit.framework in Frameworks */,
 				3AD6D05C164E5CD000AFECEC /* UIKit.framework in Frameworks */,
 				3AD6D05E164E5CD000AFECEC /* Foundation.framework in Frameworks */,
@@ -157,6 +160,7 @@
 		3AD6D05A164E5CD000AFECEC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				159E2D94164EB0530087CA15 /* CoreLocation.framework */,
 				159E2D82164E79660087CA15 /* MapKit.framework */,
 				3AD6D0A8164E671A00AFECEC /* Third Parties */,
 				3AD6D05B164E5CD000AFECEC /* UIKit.framework */,

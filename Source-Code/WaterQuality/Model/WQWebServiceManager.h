@@ -22,7 +22,7 @@ typedef void (^WQMeasurementsResponse)(id responseObject, NSError *error);
 - (void)getMeasurementForLocation:(CLLocation *)location
                  withCompletition:(WQMeasurementsResponse)measurementResponse;
 
-- (void)getParameterForMeasurementID:(NSInteger)measurement
+- (void)getParameterForMeasurementID:(long)measurement
                     withCompletition:(WQMeasurementsResponse)measurementResponse;
 
 - (void)getListOfMeasurementsForLocation:(CLLocation *)location

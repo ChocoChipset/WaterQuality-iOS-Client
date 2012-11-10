@@ -9,9 +9,6 @@
 #import "WQWebServiceManager.h"
 #import "SVHTTPWQClient.h"  // SVHTTPWQClient should be used instead of SVHTTPClient
 
-
-
-
 @implementation WQWebServiceManager
 
 - (id)init
@@ -37,10 +34,20 @@
    
 }
 
-- (void)getParameterForMeasurementID:(NSInteger)measurement
+- (void)getParameterForMeasurementID:(long)measurement
                     withCompletition:(WQMeasurementsResponse)measurementResponse
 {
-    
+    [[SVHTTPWQClient sharedClient] GET:[NSString stringWithFormat:@"/v1/measurements/%ld/attributes/",measurement]
+                            parameters:nil
+                            completion:^(id response, NSHTTPURLResponse *urlResponse, NSError *error) {
+                                NSLog(@"%@",response);
+                                id objectToPass = nil;
+                                if (error)
+                                    objectToPass = response;
+                                [[NSNotificationCenter defaultCenter] postNotificationName:K_NOTIFICATION_MEASHUREMENT_PARAMETERFOR_LOCATION_COMPLETE
+                                                                                    object:self
+                                                                                  userInfo:objectToPass];
+                            }];
 }
 
 - (void)getListOfMeasurementsForLocation:(CLLocation *)location
