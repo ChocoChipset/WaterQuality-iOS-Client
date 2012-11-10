@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		159E2D83164E79660087CA15 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 159E2D82164E79660087CA15 /* MapKit.framework */; };
 		159E2D95164EB0530087CA15 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 159E2D94164EB0530087CA15 /* CoreLocation.framework */; };
+		159E2DA1164EB5CC0087CA15 /* icon.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 159E2DA0164EB5CC0087CA15 /* icon.PNG */; };
+		159E2DA3164EB6090087CA15 /* icon@2x.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 159E2DA2164EB6090087CA15 /* icon@2x.PNG */; };
 		3AD6D05C164E5CD000AFECEC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD6D05B164E5CD000AFECEC /* UIKit.framework */; };
 		3AD6D05E164E5CD000AFECEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD6D05D164E5CD000AFECEC /* Foundation.framework */; };
 		3AD6D060164E5CD000AFECEC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD6D05F164E5CD000AFECEC /* CoreGraphics.framework */; };
@@ -50,6 +52,8 @@
 /* Begin PBXFileReference section */
 		159E2D82164E79660087CA15 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		159E2D94164EB0530087CA15 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		159E2DA0164EB5CC0087CA15 /* icon.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.PNG; path = ../icon.PNG; sourceTree = "<group>"; };
+		159E2DA2164EB6090087CA15 /* icon@2x.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.PNG"; path = "../icon@2x.PNG"; sourceTree = "<group>"; };
 		3AD6D057164E5CD000AFECEC /* WaterQuality.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaterQuality.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AD6D05B164E5CD000AFECEC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3AD6D05D164E5CD000AFECEC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -138,6 +142,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		159E2D97164EB4600087CA15 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		3AD6D04C164E5CD000AFECEC = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +185,7 @@
 		3AD6D061164E5CD000AFECEC /* WaterQuality */ = {
 			isa = PBXGroup;
 			children = (
+				159E2D97164EB4600087CA15 /* Resources */,
 				159E2D72164E6C260087CA15 /* Controllers */,
 				159E2D73164E6C260087CA15 /* Model */,
 				3AD6D06A164E5CD000AFECEC /* WQAppDelegate.h */,
@@ -189,6 +201,8 @@
 		3AD6D062164E5CD000AFECEC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				159E2DA0164EB5CC0087CA15 /* icon.PNG */,
+				159E2DA2164EB6090087CA15 /* icon@2x.PNG */,
 				3AD6D063164E5CD000AFECEC /* WaterQuality-Info.plist */,
 				3AD6D064164E5CD000AFECEC /* InfoPlist.strings */,
 				3AD6D067164E5CD000AFECEC /* main.m */,
@@ -345,6 +359,8 @@
 				3AD6D072164E5CD000AFECEC /* Default-568h@2x.png in Resources */,
 				3AD6D075164E5CD000AFECEC /* MainStoryboard_iPhone.storyboard in Resources */,
 				3AD6D078164E5CD000AFECEC /* MainStoryboard_iPad.storyboard in Resources */,
+				159E2DA1164EB5CC0087CA15 /* icon.PNG in Resources */,
+				159E2DA3164EB6090087CA15 /* icon@2x.PNG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
