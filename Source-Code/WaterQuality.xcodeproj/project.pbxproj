@@ -103,6 +103,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		159E2D72164E6C260087CA15 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		159E2D73164E6C260087CA15 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		3AD6D04C164E5CD000AFECEC = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +151,8 @@
 		3AD6D061164E5CD000AFECEC /* WaterQuality */ = {
 			isa = PBXGroup;
 			children = (
+				159E2D72164E6C260087CA15 /* Controllers */,
+				159E2D73164E6C260087CA15 /* Model */,
 				3AD6D06A164E5CD000AFECEC /* WQAppDelegate.h */,
 				3AD6D06B164E5CD000AFECEC /* WQAppDelegate.m */,
 				3AD6D073164E5CD000AFECEC /* MainStoryboard_iPhone.storyboard */,
