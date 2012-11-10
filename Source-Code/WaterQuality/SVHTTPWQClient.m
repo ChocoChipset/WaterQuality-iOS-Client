@@ -18,7 +18,7 @@
     
     if (self)
     {
-        self.sendParametersAsJSON = YES;
+        self.sendParametersAsJSON = NO;
         self.basePath = kWEB_SERVICE_BASE_URL;
     }
     

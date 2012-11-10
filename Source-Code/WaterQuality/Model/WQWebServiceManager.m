@@ -40,7 +40,7 @@
 - (void)getParameterForMeasurementID:(NSInteger)measurement
                     withCompletition:(WQMeasurementsResponse)measurementResponse
 {
-    []
+    
 }
 
 - (void)getListOfMeasurementsForLocation:(CLLocation *)location
@@ -48,11 +48,28 @@
                          resultLimitedTo:(NSInteger)limit
                         withCompletition:(WQMeasurementsResponse)measurementResponse
 {
+    // GET /v1/measurements/<lat>/<long>/<distance>/
     
-    [[SVHTTPClient sharedClient] GET:@"users/show.json"
-                          parameters:[NSDictionary dictionaryWithObject:@"samvermette" forKey:@"screen_name"]
+    NSString *getCall = [NSString stringWithFormat:@"/v1/measurements/%f/%f/%f/",
+                        location.coordinate.latitude,
+                        location.coordinate.longitude,
+                        radioInMeters];
+    
+    NSArray *parameterKeys = [NSArray arrayWithObjects:kPARAMETER_KEY_FOR_OFFSET, kPARAMETER_KEY_FOR_LIMIT, nil];
+    
+    NSArray *parameterValues = [NSArray arrayWithObjects:0, kDEFAULT_LIMIT_FOR_MEASUREMENTS, nil];
+    
+    
+    NSDictionary *parametersDictionary = [NSDictionary dictionaryWithObjects:parameterValues
+                                                                     forKeys:parameterKeys];
+    
+    [[SVHTTPWQClient sharedClient] GET:getCall
+                          parameters:parametersDictionary
                           completion:^(id response, NSHTTPURLResponse *urlResponse, NSError *error) {
-                              followersLabel.text = [NSString stringWithFormat:@"@samvermette has %@ followers", [response valueForKey:@"followers_count"]];
+//                            [[NSNotificationCenter defaultCenter] postNotificationName:@"TestNotification
+//                                                                                object:self];
+                          
+                          
                           }];
     
 }
