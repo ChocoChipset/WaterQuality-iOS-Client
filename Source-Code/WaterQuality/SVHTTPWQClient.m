@@ -8,8 +8,6 @@
 
 #import "SVHTTPWQClient.h"
 
-#define kWEB_SERVICE_BASE_PATH @"http://example.com"
-
 // SVHTTPWQClient should be used instead of SVHTTPClient!
 
 @implementation SVHTTPWQClient

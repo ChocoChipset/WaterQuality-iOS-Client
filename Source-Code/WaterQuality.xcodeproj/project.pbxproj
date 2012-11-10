@@ -83,6 +83,7 @@
 		3AD6D0CB164E73AC00AFECEC /* WQMeasurementDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQMeasurementDetailsViewController.m; sourceTree = "<group>"; };
 		3AD6D0CD164E780600AFECEC /* SVHTTPWQClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SVHTTPWQClient.h; path = WaterQuality/SVHTTPWQClient.h; sourceTree = SOURCE_ROOT; };
 		3AD6D0CE164E780600AFECEC /* SVHTTPWQClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SVHTTPWQClient.m; path = WaterQuality/SVHTTPWQClient.m; sourceTree = SOURCE_ROOT; };
+		3AD6D0DC164E7B6B00AFECEC /* WQConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQConstants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +169,7 @@
 				3AD6D073164E5CD000AFECEC /* MainStoryboard_iPhone.storyboard */,
 				3AD6D076164E5CD000AFECEC /* MainStoryboard_iPad.storyboard */,
 				3AD6D062164E5CD000AFECEC /* Supporting Files */,
+				3AD6D0DC164E7B6B00AFECEC /* WQConstants.h */,
 			);
 			path = WaterQuality;
 			sourceTree = "<group>";
