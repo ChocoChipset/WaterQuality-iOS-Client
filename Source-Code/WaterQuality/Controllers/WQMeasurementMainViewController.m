@@ -19,6 +19,8 @@
 
 -(void)dealloc
 {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    
     [_iconImageView release];
     [_persentLabel release];
     [_placeNameLabel release];
@@ -54,15 +56,22 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+-(void)receivedWebServiceManagerNotification:(NSNotification *)notification
+{
+    NSLog(@"So this is the response: %@", notification.userInfo);
+}
+
 #pragma mark - LocationManager
 
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
-    [[WQWebServiceManager sharedWebServiceManager] getMeasurementForLocation:[locations lastObject ]
-                                                            withCompletition:^(id responseObject, NSError *error) {
-                                                                NSLog(@"Result of response object: %@", responseObject);
-                                                            }];
-
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(receivedWebServiceManagerNotification:)
+                                                 name:K_NOTIFICATION_MEASHUREMENT_FOR_LOCATION_COMPLETE
+                                               object:nil];
+    
+    [[WQWebServiceManager sharedWebServiceManager] getMeasurementForLocation:[locations lastObject]];
 }
 
 

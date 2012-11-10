@@ -15,8 +15,7 @@
 - (void)getListOfMeasurementsForLocation:(CLLocation *)location
                              withinRadio:(NSInteger)radioInMeters
                          resultLimitedTo:(NSInteger)limit
-                         notificationKey:(NSString *)notificationKey
-                        withCompletition:(WQMeasurementsResponse)measurementResponse;
+                         notificationKey:(NSString *)notificationKey;
 
 
 @end
@@ -52,18 +51,15 @@ static WQWebServiceManager *static_WebServiceManager = nil;
 
 
 - (void)getMeasurementForLocation:(CLLocation *)location
-                 withCompletition:(WQMeasurementsResponse)measurementResponse
 {
     [self getListOfMeasurementsForLocation:location
                                withinRadio:kRADIO_BY_DEFAULT
                            resultLimitedTo:1
-                           notificationKey:K_NOTIFICATION_MEASHUREMENT_FOR_LOCATION_COMPLETE
-                          withCompletition:measurementResponse];
+                           notificationKey:K_NOTIFICATION_MEASHUREMENT_FOR_LOCATION_COMPLETE];
    
 }
 
 - (void)getParameterForMeasurementID:(long)measurement
-                    withCompletition:(WQMeasurementsResponse)measurementResponse
 {
     [[SVHTTPWQClient sharedClient] GET:[NSString stringWithFormat:@"/v1/measurements/%ld/attributes/",measurement]
                             parameters:nil
@@ -81,20 +77,17 @@ static WQWebServiceManager *static_WebServiceManager = nil;
 - (void)getListOfMeasurementsForLocation:(CLLocation *)location
                              withinRadio:(NSInteger)radioInMeters
                          resultLimitedTo:(NSInteger)limit
-                        withCompletition:(WQMeasurementsResponse)measurementResponse
 {
     [self getListOfMeasurementsForLocation:location
                                withinRadio:radioInMeters
                            resultLimitedTo:limit
-                           notificationKey:K_NOTIFICATION_MEASHUREMENTS_LIST_COMPLETE
-                          withCompletition:measurementResponse];
+                           notificationKey:K_NOTIFICATION_MEASHUREMENTS_LIST_COMPLETE];
 }
 
 - (void)getListOfMeasurementsForLocation:(CLLocation *)location
                              withinRadio:(NSInteger)radioInMeters
                          resultLimitedTo:(NSInteger)limit
                          notificationKey:(NSString *)notificationKey
-                        withCompletition:(WQMeasurementsResponse)measurementResponse
 {
     self.locationPoint = location;
     self.radio = kRADIO_BY_DEFAULT;
@@ -129,11 +122,7 @@ static WQWebServiceManager *static_WebServiceManager = nil;
                                 [[NSNotificationCenter defaultCenter] postNotificationName:notificationKey
                                                                                     object:self
                                                                                   userInfo:resultingObject];
-                                
-                                
-                                
                             }];
-    
 }
 
 
