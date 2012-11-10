@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		159E2D83164E79660087CA15 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 159E2D82164E79660087CA15 /* MapKit.framework */; };
 		3AD6D05C164E5CD000AFECEC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD6D05B164E5CD000AFECEC /* UIKit.framework */; };
 		3AD6D05E164E5CD000AFECEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD6D05D164E5CD000AFECEC /* Foundation.framework */; };
 		3AD6D060164E5CD000AFECEC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD6D05F164E5CD000AFECEC /* CoreGraphics.framework */; };
@@ -18,12 +19,6 @@
 		3AD6D072164E5CD000AFECEC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD6D071164E5CD000AFECEC /* Default-568h@2x.png */; };
 		3AD6D075164E5CD000AFECEC /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AD6D073164E5CD000AFECEC /* MainStoryboard_iPhone.storyboard */; };
 		3AD6D078164E5CD000AFECEC /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AD6D076164E5CD000AFECEC /* MainStoryboard_iPad.storyboard */; };
-		3AD6D07B164E5CD000AFECEC /* WQFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6D07A164E5CD000AFECEC /* WQFirstViewController.m */; };
-		3AD6D07D164E5CD000AFECEC /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD6D07C164E5CD000AFECEC /* first.png */; };
-		3AD6D07F164E5CD000AFECEC /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD6D07E164E5CD000AFECEC /* first@2x.png */; };
-		3AD6D082164E5CD000AFECEC /* WQSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6D081164E5CD000AFECEC /* WQSecondViewController.m */; };
-		3AD6D084164E5CD000AFECEC /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD6D083164E5CD000AFECEC /* second.png */; };
-		3AD6D086164E5CD000AFECEC /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD6D085164E5CD000AFECEC /* second@2x.png */; };
 		3AD6D08E164E5CD100AFECEC /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD6D08D164E5CD100AFECEC /* SenTestingKit.framework */; };
 		3AD6D08F164E5CD100AFECEC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD6D05B164E5CD000AFECEC /* UIKit.framework */; };
 		3AD6D090164E5CD100AFECEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD6D05D164E5CD000AFECEC /* Foundation.framework */; };
@@ -49,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		159E2D82164E79660087CA15 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3AD6D057164E5CD000AFECEC /* WaterQuality.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaterQuality.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AD6D05B164E5CD000AFECEC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3AD6D05D164E5CD000AFECEC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -64,14 +60,6 @@
 		3AD6D071164E5CD000AFECEC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		3AD6D074164E5CD000AFECEC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		3AD6D077164E5CD000AFECEC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		3AD6D079164E5CD000AFECEC /* WQFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WQFirstViewController.h; sourceTree = "<group>"; };
-		3AD6D07A164E5CD000AFECEC /* WQFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WQFirstViewController.m; sourceTree = "<group>"; };
-		3AD6D07C164E5CD000AFECEC /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		3AD6D07E164E5CD000AFECEC /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		3AD6D080164E5CD000AFECEC /* WQSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WQSecondViewController.h; sourceTree = "<group>"; };
-		3AD6D081164E5CD000AFECEC /* WQSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WQSecondViewController.m; sourceTree = "<group>"; };
-		3AD6D083164E5CD000AFECEC /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
-		3AD6D085164E5CD000AFECEC /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		3AD6D08C164E5CD100AFECEC /* WaterQualityTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WaterQualityTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AD6D08D164E5CD100AFECEC /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		3AD6D095164E5CD100AFECEC /* WaterQualityTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WaterQualityTests-Info.plist"; sourceTree = "<group>"; };
@@ -99,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				159E2D83164E79660087CA15 /* MapKit.framework in Frameworks */,
 				3AD6D05C164E5CD000AFECEC /* UIKit.framework in Frameworks */,
 				3AD6D05E164E5CD000AFECEC /* Foundation.framework in Frameworks */,
 				3AD6D060164E5CD000AFECEC /* CoreGraphics.framework in Frameworks */,
@@ -156,6 +145,7 @@
 		3AD6D05A164E5CD000AFECEC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				159E2D82164E79660087CA15 /* MapKit.framework */,
 				3AD6D0A8164E671A00AFECEC /* Third Parties */,
 				3AD6D05B164E5CD000AFECEC /* UIKit.framework */,
 				3AD6D05D164E5CD000AFECEC /* Foundation.framework */,
@@ -174,14 +164,6 @@
 				3AD6D06B164E5CD000AFECEC /* WQAppDelegate.m */,
 				3AD6D073164E5CD000AFECEC /* MainStoryboard_iPhone.storyboard */,
 				3AD6D076164E5CD000AFECEC /* MainStoryboard_iPad.storyboard */,
-				3AD6D079164E5CD000AFECEC /* WQFirstViewController.h */,
-				3AD6D07A164E5CD000AFECEC /* WQFirstViewController.m */,
-				3AD6D07C164E5CD000AFECEC /* first.png */,
-				3AD6D07E164E5CD000AFECEC /* first@2x.png */,
-				3AD6D080164E5CD000AFECEC /* WQSecondViewController.h */,
-				3AD6D081164E5CD000AFECEC /* WQSecondViewController.m */,
-				3AD6D083164E5CD000AFECEC /* second.png */,
-				3AD6D085164E5CD000AFECEC /* second@2x.png */,
 				3AD6D062164E5CD000AFECEC /* Supporting Files */,
 			);
 			path = WaterQuality;
@@ -342,10 +324,6 @@
 				3AD6D072164E5CD000AFECEC /* Default-568h@2x.png in Resources */,
 				3AD6D075164E5CD000AFECEC /* MainStoryboard_iPhone.storyboard in Resources */,
 				3AD6D078164E5CD000AFECEC /* MainStoryboard_iPad.storyboard in Resources */,
-				3AD6D07D164E5CD000AFECEC /* first.png in Resources */,
-				3AD6D07F164E5CD000AFECEC /* first@2x.png in Resources */,
-				3AD6D084164E5CD000AFECEC /* second.png in Resources */,
-				3AD6D086164E5CD000AFECEC /* second@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,8 +360,6 @@
 			files = (
 				3AD6D068164E5CD000AFECEC /* main.m in Sources */,
 				3AD6D06C164E5CD000AFECEC /* WQAppDelegate.m in Sources */,
-				3AD6D07B164E5CD000AFECEC /* WQFirstViewController.m in Sources */,
-				3AD6D082164E5CD000AFECEC /* WQSecondViewController.m in Sources */,
 				3AD6D0AF164E6ACB00AFECEC /* SVHTTPClient.m in Sources */,
 				3AD6D0B0164E6ACB00AFECEC /* SVHTTPRequest.m in Sources */,
 				3AD6D0BD164E723200AFECEC /* WQMeasurementsFilterViewController.m in Sources */,
