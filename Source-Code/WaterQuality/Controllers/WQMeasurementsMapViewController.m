@@ -65,7 +65,7 @@
 
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
 {
-    
+    [self performSegueWithIdentifier:@"ShowDetailsAboutMeasurements" sender:self];
 }
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
@@ -88,6 +88,10 @@
         }
     } else {
         pinView.annotation = annotation;
+    }
+    if ([annotation isMemberOfClass:[WQAnotation class]])
+    {
+        self.currentMeasurement = ((WQAnotation *)annotation).measurement;
     }
     return pinView;
 }
@@ -148,6 +152,7 @@
 
 - (void)dealloc {
     [_map release];
+    [_currentMeasurement release];
     [super dealloc];
 }
 @end

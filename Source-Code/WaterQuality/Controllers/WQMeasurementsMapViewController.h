@@ -14,6 +14,6 @@
 
 
 @property (retain, nonatomic) IBOutlet MKMapView *map;
-
+@property (strong, nonatomic) NSDictionary *currentMeasurement;
 
 @end

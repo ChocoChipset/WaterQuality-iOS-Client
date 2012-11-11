@@ -12,5 +12,6 @@
 @interface WQAnotation : MKPointAnnotation
 
 @property (assign, nonatomic) NSInteger code;
+@property (strong, nonatomic) NSDictionary *measurement;
 
 @end

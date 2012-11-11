@@ -10,6 +10,10 @@
 
 @implementation WQAnotation
 
-
+- (void)dealloc
+{
+    [_measurement release];
+    [super dealloc];
+}
 
 @end

@@ -8,14 +8,16 @@
 
 #import "WQDisplayDetailsSegue.h"
 #import "WQMeasurementMainViewController.h"
+#import "WQMeasurementsMapViewController.h"
 
 @implementation WQDisplayDetailsSegue
 
 - (void)perform
 {
     WQMeasurementMainViewController *destination = self.destinationViewController;
+    WQMeasurementsMapViewController *source = self.sourceViewController;
     destination.dontCalculateUserLocation = YES;
-    [destination updateViewConstraints]
+    [destination updateUserInterfaceWithMeasurement:source.currentMeasurement];
 }
 
 @end
