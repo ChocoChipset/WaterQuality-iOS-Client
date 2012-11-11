@@ -70,7 +70,7 @@
                     <navigationItem key="navigationItem" id="3qS-ia-54D">
                         <barButtonItem key="rightBarButtonItem" title="Details" id="B7p-Px-5PZ">
                             <connections>
-                                <segue destination="ADU-w0-0gP" kind="push" id="9fw-yZ-Ne9"/>
+                                <segue destination="kr9-MC-uJx" kind="push" id="j8z-zh-uCh"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -86,35 +86,35 @@
             </objects>
             <point key="canvasLocation" x="1131" y="1054"/>
         </scene>
-        <!--Table View Controller-->
-        <scene sceneID="cZ8-JB-Ab8">
+        <!--Measurement Details View Controller-->
+        <scene sceneID="RKB-IM-6Mo">
             <objects>
-                <tableViewController id="ADU-w0-0gP" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="0EV-Uf-acU">
+                <viewController id="kr9-MC-uJx" customClass="WQMeasurementDetailsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zWh-Kx-vHM">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Fan-Yj-gG5">
-                                <rect key="frame" x="0.0" y="46" width="320" height="46"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="10" y="1" width="300" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="ADU-w0-0gP" id="J2b-IK-XvZ"/>
-                            <outlet property="delegate" destination="ADU-w0-0gP" id="7az-oc-VMb"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="H3p-lp-pCp"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="B8N-hF-zD8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Background.png" id="QKU-F9-jdA">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="esn-9Z-C20">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="kr9-MC-uJx" id="zRC-wK-KzX"/>
+                                    <outlet property="delegate" destination="kr9-MC-uJx" id="EWA-AU-7AO"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="UDp-LK-AlP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gGA-bR-vDK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1549" y="1054"/>
+            <point key="canvasLocation" x="1502" y="1052"/>
         </scene>
         <!--Navigation Controller - Map-->
         <scene sceneID="8Yn-uU-XmV">
@@ -227,6 +227,9 @@
     <classes>
         <class className="WQFuelLikeIndicatorView" superclassName="UIView">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/WQFuelLikeIndicatorView.h"/>
+        </class>
+        <class className="WQMeasurementDetailsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WQMeasurementDetailsViewController.h"/>
         </class>
         <class className="WQMeasurementMainViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/WQMeasurementMainViewController.h"/>

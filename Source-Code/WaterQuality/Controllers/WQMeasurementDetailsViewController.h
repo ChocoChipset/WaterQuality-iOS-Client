@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WQMeasurementDetailsViewController : UIViewController
+@interface WQMeasurementDetailsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic, retain) IBOutlet UITableView *tableView;
+
 
 
 @end
