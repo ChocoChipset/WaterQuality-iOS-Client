@@ -79,7 +79,7 @@
 {
     self.persentLabel.text = [NSString stringWithFormat:@"%d%%", percentage];
     
-    NSArray *colorsForLabel = [NSArray arrayWithObjects: [UIColor redColor], [UIColor yellowColor], [UIColor orangeColor], [UIColor greenColor], [UIColor greenColor],  nil];
+    NSArray *colorsForLabel = [NSArray arrayWithObjects: [UIColor redColor], [UIColor orangeColor], [UIColor yellowColor], [UIColor greenColor], [UIColor greenColor],  nil];
     
     int indexForColorLabel = lroundf(percentage / (100 / [colorsForLabel count]));
     

@@ -42,11 +42,11 @@
 
 -(void)updateFuelIndicatorWithPercent:(NSInteger)percentage
 {
-    int numberOfBarsToColor = lroundf(percentage/self.subviews.count);
+    int numberOfBarsToColor = lroundf(percentage/(100/self.subviews.count));
     
     NSArray *colorsForBars = [NSArray arrayWithObjects: [UIColor greenColor], [UIColor greenColor], [UIColor orangeColor], [UIColor yellowColor], [UIColor redColor] , nil];
     
-    for (int i = kNUMBER_OF_BARS-1 ; i > kNUMBER_OF_BARS - numberOfBarsToColor ; i--)
+    for (int i = kNUMBER_OF_BARS-1 ; i >= kNUMBER_OF_BARS - numberOfBarsToColor ; i--)
     {
         ((UIView *)[self.subviews objectAtIndex:i]).backgroundColor = (UIColor *)[colorsForBars objectAtIndex:i];
     }
