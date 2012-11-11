@@ -96,12 +96,10 @@
         pinView.rightCalloutAccessoryView = rightButton;
 
     }
-    else
-    {
+    
 
-
-        pinView.annotation = annotation;
-    }
+    pinView.annotation = annotation;
+    
     if ([annotation isMemberOfClass:[WQAnotation class]])
     {
         UIImageView *image = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
@@ -131,6 +129,7 @@
                 anotationFound = TRUE;
             }
         }
+        
         if (!anotationFound)
             [self.map removeAnnotation:anotation];
     }

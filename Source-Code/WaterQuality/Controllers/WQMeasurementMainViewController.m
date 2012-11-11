@@ -75,7 +75,10 @@
         
     }
 }
-
+-(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+{
+    return UIInterfaceOrientationIsPortrait(toInterfaceOrientation);
+}
 
 -(void)setPercentLabelForPercentage:(NSInteger)percentage
 {

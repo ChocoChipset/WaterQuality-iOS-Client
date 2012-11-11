@@ -39,6 +39,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.title = @"List of Sources";
     [[WQWebServiceManager sharedWebServiceManager] getListOfMeasurementsForLocation:[[CLLocation alloc] initWithLatitude:self.point.latitude longitude:self.point.longitude]
                                                                withinRadioLongitude:self.longitudeDelta
                                                                 withinRadioLatitude:self.longitudeDelta

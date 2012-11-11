@@ -41,7 +41,7 @@
 {
     [super viewDidLoad];
     
-    self.title = @"Measurement Details";
+    self.title = @"Details";
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(receivedWebServiceManagerNotification:)
@@ -54,6 +54,7 @@
     
 	// Do any additional setup after loading the view.
 }
+
 
 -(void)updateUserInterfaceWithMeasurementDetails:(NSArray *)measurementsArray
 {
@@ -100,7 +101,7 @@
     
     if (!cell)
     {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     
     NSDictionary *currentPair = [self.listOfKeysAndValues objectAtIndex:indexPath.row];
@@ -110,6 +111,12 @@
     // Configure the cell...
     
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    cell.textLabel.minimumFontSize = 8;
+    cell.textLabel.adjustsFontSizeToFitWidth = YES;
 }
 
 /*
