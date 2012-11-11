@@ -92,12 +92,25 @@ static WQWebServiceManager *static_WebServiceManager = nil;
     self.locationPoint = location;
     self.radio = kRADIO_BY_DEFAULT_DEGREE;
     
+    NSString *getCall = nil;
+    
+    if (radioInMeters != 0)
+    {
+        getCall = [NSString stringWithFormat:@"/v1/measurements/%f/%f/%d/",
+                   location.coordinate.latitude,
+                   location.coordinate.longitude,
+                   radioInMeters];
+    }
+    else
+    {
+        getCall = [NSString stringWithFormat:@"/v1/measurements/%f/%f/",
+                   location.coordinate.latitude,
+                   location.coordinate.longitude];
+    }
+
     // GET /v1/measurements/<lat>/<long>/<distance>/
     
-    NSString *getCall = [NSString stringWithFormat:@"/v1/measurements/%f/%f/%d/",
-                         location.coordinate.latitude,
-                         location.coordinate.longitude,
-                         radioInMeters];
+    
     
     NSArray *parameterKeys = [NSArray arrayWithObjects:kPARAMETER_KEY_FOR_OFFSET, kPARAMETER_KEY_FOR_LIMIT, nil];
     
@@ -115,9 +128,23 @@ static WQWebServiceManager *static_WebServiceManager = nil;
                                 
                                 if (!error)
                                 {
-                                    resultingObject = response;
+                                    if ([response isKindOfClass:[NSDictionary class]])
+                                    {
+                                        if (limit==1)
+                                        {
+                                            resultingObject = [[response valueForKey:@"objects"] lastObject];
+                                        }
+                                        else
+                                        {
+                                            resultingObject = response;
+                                        }
+                                    
+                                    }    
                                 }
+                                
                                 NSLog(@"Response (%@) %@. Error %@", [response class], response, error);
+                                
+                                
                                 
                                 [[NSNotificationCenter defaultCenter] postNotificationName:notificationKey
                                                                                     object:self

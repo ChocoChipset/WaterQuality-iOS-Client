@@ -15,7 +15,7 @@
 
 // Default settings for Maps
 /* ------------------------------------------------------------------------- */
-#define kRADIO_BY_DEFAULT_DEGREE 10
+#define kRADIO_BY_DEFAULT_DEGREE 0
 #define kDEFAULT_LATITUDE_ 52.2297
 #define kDEFAULT_LONGITUDE_ 21.0122
 /* ------------------------------------------------------------------------- */

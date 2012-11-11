@@ -37,6 +37,10 @@
 		3AD6D0CF164E780600AFECEC /* SVHTTPWQClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6D0CE164E780600AFECEC /* SVHTTPWQClient.m */; };
 		3AD6D0E0164E820500AFECEC /* WQMeasurementsAbstractViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6D0DF164E820400AFECEC /* WQMeasurementsAbstractViewController.m */; };
 		3AD6D0E3164E8E9E00AFECEC /* WQWebServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6D0E2164E8E9E00AFECEC /* WQWebServiceManager.m */; };
+		3AD6D11A164EC7C700AFECEC /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD6D118164EC7C700AFECEC /* Background.png */; };
+		3AD6D11B164EC7C700AFECEC /* Background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD6D119164EC7C700AFECEC /* Background@2x.png */; };
+		3AD6D11F164EC95F00AFECEC /* WQFuelLikeIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6D11E164EC95E00AFECEC /* WQFuelLikeIndicatorView.m */; };
+		3AD6D122164ED2C000AFECEC /* CodeIcon_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD6D121164ED2C000AFECEC /* CodeIcon_0.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +100,11 @@
 		3AD6D0DF164E820400AFECEC /* WQMeasurementsAbstractViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQMeasurementsAbstractViewController.m; sourceTree = "<group>"; };
 		3AD6D0E1164E8E9E00AFECEC /* WQWebServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQWebServiceManager.h; sourceTree = "<group>"; };
 		3AD6D0E2164E8E9E00AFECEC /* WQWebServiceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQWebServiceManager.m; sourceTree = "<group>"; };
+		3AD6D118164EC7C700AFECEC /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
+		3AD6D119164EC7C700AFECEC /* Background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Background@2x.png"; sourceTree = "<group>"; };
+		3AD6D11D164EC95E00AFECEC /* WQFuelLikeIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQFuelLikeIndicatorView.h; sourceTree = "<group>"; };
+		3AD6D11E164EC95E00AFECEC /* WQFuelLikeIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQFuelLikeIndicatorView.m; sourceTree = "<group>"; };
+		3AD6D121164ED2C000AFECEC /* CodeIcon_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CodeIcon_0.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +210,7 @@
 		3AD6D062164E5CD000AFECEC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3AD6D117164EC7C700AFECEC /* Images */,
 				159E2DA0164EB5CC0087CA15 /* icon.PNG */,
 				159E2DA2164EB6090087CA15 /* icon@2x.PNG */,
 				3AD6D063164E5CD000AFECEC /* WaterQuality-Info.plist */,
@@ -277,8 +287,28 @@
 				3AD6D0C8164E739500AFECEC /* WQMeasurementMainViewController.m */,
 				3AD6D0CA164E73AC00AFECEC /* WQMeasurementDetailsViewController.h */,
 				3AD6D0CB164E73AC00AFECEC /* WQMeasurementDetailsViewController.m */,
+				3AD6D11D164EC95E00AFECEC /* WQFuelLikeIndicatorView.h */,
+				3AD6D11E164EC95E00AFECEC /* WQFuelLikeIndicatorView.m */,
 			);
 			name = "Closest Measurement";
+			sourceTree = "<group>";
+		};
+		3AD6D117164EC7C700AFECEC /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				3AD6D120164ED2C000AFECEC /* Codes */,
+				3AD6D118164EC7C700AFECEC /* Background.png */,
+				3AD6D119164EC7C700AFECEC /* Background@2x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		3AD6D120164ED2C000AFECEC /* Codes */ = {
+			isa = PBXGroup;
+			children = (
+				3AD6D121164ED2C000AFECEC /* CodeIcon_0.png */,
+			);
+			path = Codes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,6 +391,9 @@
 				3AD6D078164E5CD000AFECEC /* MainStoryboard_iPad.storyboard in Resources */,
 				159E2DA1164EB5CC0087CA15 /* icon.PNG in Resources */,
 				159E2DA3164EB6090087CA15 /* icon@2x.PNG in Resources */,
+				3AD6D11A164EC7C700AFECEC /* Background.png in Resources */,
+				3AD6D11B164EC7C700AFECEC /* Background@2x.png in Resources */,
+				3AD6D122164ED2C000AFECEC /* CodeIcon_0.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +440,7 @@
 				3AD6D0CF164E780600AFECEC /* SVHTTPWQClient.m in Sources */,
 				3AD6D0E0164E820500AFECEC /* WQMeasurementsAbstractViewController.m in Sources */,
 				3AD6D0E3164E8E9E00AFECEC /* WQWebServiceManager.m in Sources */,
+				3AD6D11F164EC95F00AFECEC /* WQFuelLikeIndicatorView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

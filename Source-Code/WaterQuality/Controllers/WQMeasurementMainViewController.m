@@ -9,9 +9,17 @@
 #import "WQMeasurementMainViewController.h"
 #import "WQWebServiceManager.h"
 
+#define kPERCENT_LABEL_RED_LABEL_LIMIT 20
+#define kPERCENT_LABEL_ORANGE_LABEL_LIMIT 40
+#define kPERCENT_LABEL_YELLOW_LABEL_LIMIT 60
+#define kPERCENT_LABEL_DARK_GREEN_LABEL_LIMIT 80
+#define kPERCENT_LABEL_GREEN_LABEL_LIMIT 100
 
+@interface WQMeasurementMainViewController (Private)
 
-@interface WQMeasurementMainViewController ()
+-(void)setIconImageForCode:(NSInteger)code;
+-(void)setPercentLabelForPercentage:(NSInteger)percentage;
+-(void)updateUserInterfaceWithMeasurement:(NSDictionary *)dictionary;
 
 @end
 
@@ -39,9 +47,77 @@
     return self;
 }
 
+-(void)setPercentLabelForPercentage:(NSInteger)percentage
+{
+    self.persentLabel.text = [NSString stringWithFormat:@"%d%%", percentage];
+    
+    UIColor *persentLabelColor = nil;
+    
+    if (percentage < kPERCENT_LABEL_GREEN_LABEL_LIMIT
+        && percentage >= kPERCENT_LABEL_DARK_GREEN_LABEL_LIMIT)
+    {
+        persentLabelColor = [UIColor greenColor];
+    }
+    else if (percentage < kPERCENT_LABEL_DARK_GREEN_LABEL_LIMIT
+                 && percentage >= kPERCENT_LABEL_YELLOW_LABEL_LIMIT)
+    {
+        persentLabelColor = [UIColor greenColor];
+    }
+    else if (percentage < kPERCENT_LABEL_YELLOW_LABEL_LIMIT
+             && percentage >= kPERCENT_LABEL_ORANGE_LABEL_LIMIT)
+    {
+        persentLabelColor = [UIColor orangeColor];
+    }
+    else if (percentage < kPERCENT_LABEL_ORANGE_LABEL_LIMIT
+             && percentage >= kPERCENT_LABEL_RED_LABEL_LIMIT)
+    {
+        persentLabelColor = [UIColor yellowColor];
+    }
+    else if (percentage < kPERCENT_LABEL_RED_LABEL_LIMIT
+             && percentage >= 0)
+    {
+        persentLabelColor = [UIColor redColor];
+    }
+    else
+    {
+        persentLabelColor = [UIColor darkGrayColor];
+        NSLog(@"Warning: No color available for range.");
+    }
+
+    self.persentLabel.textColor = persentLabelColor;
+}
+
+-(void)setIconImageForCode:(NSInteger)code
+{
+    NSString *iconImageName = @"CodeIcon_0";
+    
+    if (code == 0)
+    {
+        
+    }
+    else
+    {
+        NSLog(@"Warning: Unrecognized Code Image");
+    }
+    
+    self.iconImageView.image = [UIImage imageNamed:iconImageName];
+    
+}
+
+-(void)updateUserInterfaceWithMeasurement:(NSDictionary *)dictionary
+{
+    [self setIconImageForCode:[[dictionary valueForKey:@"code"] intValue]];
+    [self setPercentLabelForPercentage: [[dictionary valueForKey:@"quality"] intValue]];
+    self.placeNameLabel.text = [dictionary valueForKey:@"locationName"];
+    self.descriptionTextView.text = [dictionary valueForKey:@"comment"];
+    
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.title = @"Water Quality Here";
     
     CLLocationManager *locationManager = [[CLLocationManager alloc] init];
     locationManager.delegate = self;
@@ -59,8 +135,13 @@
 
 -(void)receivedWebServiceManagerNotification:(NSNotification *)notification
 {
+    
+    
     NSLog(@"So this is the response: %@", notification.userInfo);
+    [self updateUserInterfaceWithMeasurement:notification.userInfo];
 }
+
+
 
 #pragma mark - LocationManager
 
