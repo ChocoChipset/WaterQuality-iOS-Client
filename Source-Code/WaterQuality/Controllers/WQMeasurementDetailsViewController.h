@@ -13,7 +13,7 @@
 @property (nonatomic, retain) IBOutlet UITableView *tableView;
 @property (nonatomic, retain) NSString *measurementID;
 
--(void)updateUserInterfaceWithMeasurementDetails:(NSDictionary *)measurementDictionary;
+-(void)updateUserInterfaceWithMeasurementDetails:(NSArray *)measurementsArray;
 
 
 @end

@@ -52,9 +52,12 @@
 	// Do any additional setup after loading the view.
 }
 
--(void)updateUserInterfaceWithMeasurementDetails:(NSDictionary *)measurementDictionary
+-(void)updateUserInterfaceWithMeasurementDetails:(NSArray *)measurementsArray
 {
-    NSLog(@"Update User Interface Function");
+    self.listOfKeysAndValues = measurementsArray;
+    [self.tableView reloadData];
+    
+    NSLog(@"Update User Interface Function (%@): %@ ", [measurementsArray class], measurementsArray);
 }
 
 - (void)viewDidDisappear:(BOOL)animated
@@ -96,7 +99,9 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
+    NSDictionary *currentPair = [self.listOfKeysAndValues objectAtIndex:indexPath.row];
     
+    cell.textLabel.text = [NSString stringWithFormat:@"%@: %@", [currentPair valueForKey:@"key"], [currentPair valueForKey:@"value"]];
     
     // Configure the cell...
     

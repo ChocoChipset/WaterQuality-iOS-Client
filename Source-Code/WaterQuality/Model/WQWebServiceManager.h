@@ -23,7 +23,7 @@ typedef void (^WQMeasurementsResponse)(id responseObject, NSError *error);
 
 - (void)getMeasurementForLocation:(CLLocation *)location;
 
-- (void)getParameterForMeasurementID:(long)measurement;
+- (void)getDetailsForMeasurementID:(NSString *)measurementID;
 
 /*- (void)getListOfMeasurementsForLocation:(CLLocation *)location
                              withinRadio:(NSInteger)radioInMeters

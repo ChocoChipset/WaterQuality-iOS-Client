@@ -60,15 +60,20 @@ static WQWebServiceManager *static_WebServiceManager = nil;
    
 }
 
-- (void)getParameterForMeasurementID:(long)measurement
+- (void)getDetailsForMeasurementID:(NSString *)measurementID
 {
-    [[SVHTTPWQClient sharedClient] GET:[NSString stringWithFormat:@"/v1/measurements/%ld/attributes/",measurement]
+    [[SVHTTPWQClient sharedClient] GET:[NSString stringWithFormat:@"/v1/measurements/%@/attributes/", measurementID]
                             parameters:nil
                             completion:^(id response, NSHTTPURLResponse *urlResponse, NSError *error) {
-                                NSLog(@"%@",response);
+                                
+                                NSLog(@"Response for Details Measurement: %@ (%@) - Error %@",response, urlResponse, error);
+                                
                                 id objectToPass = nil;
-                                if (error)
-                                    objectToPass = response;
+                                
+                                if (!error)
+                                {
+                                    objectToPass = [response valueForKey:@"objects"];
+                                }
                                 [[NSNotificationCenter defaultCenter] postNotificationName:K_NOTIFICATION_MEASHUREMENT_PARAMETERFOR_LOCATION_COMPLETE
                                                                                     object:self
                                                                                   userInfo:objectToPass];
