@@ -43,11 +43,11 @@
 /* ------------------------------------------------------------------------- */
 
 #define kCODE_ICON_NAME_PREFIX @"CodeIcon_"
-#define kCODE_ICON_NAME_SUFFIX_LIST @"" // using same images as in main view right now
+#define kCODE_ICON_NAME_SUFFIX_LIST @"_list" // using same images as in main view right now
 #define kCODE_ICON_NAME_SUFFIX_MAP @"_map"
 #define kCODE_ICON_NAME_DEFAULT_INDEX 0
 
-
+#define kLOADING_VIEW_TAG 8576
 
 // Segues Keys
 
