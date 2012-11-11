@@ -11,7 +11,9 @@
 @interface WQMeasurementDetailsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, retain) IBOutlet UITableView *tableView;
+@property (nonatomic, retain) NSString *measurementID;
 
+-(void)updateUserInterfaceWithMeasurementDetails:(NSDictionary *)measurementDictionary;
 
 
 @end

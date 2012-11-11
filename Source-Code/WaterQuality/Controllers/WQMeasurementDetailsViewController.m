@@ -7,7 +7,7 @@
 //
 
 #import "WQMeasurementDetailsViewController.h"
-
+#import "WQWebServiceManager.h"
 @interface WQMeasurementDetailsViewController ()
 
 @property (nonatomic, retain) NSArray *listOfKeysAndValues;
@@ -25,14 +25,36 @@
     return self;
 }
 
+-(void)receivedWebServiceManagerNotification:(NSNotification *)notification
+{
+
+    NSLog(@"Details from Measurement: %@", notification.userInfo);
+    [self updateUserInterfaceWithMeasurementDetails:notification.userInfo];
+}
+
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     self.title = @"Measurement Details";
     
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(receivedWebServiceManagerNotification:)
+                                                 name:K_NOTIFICATION_MEASHUREMENT_PARAMETERFOR_LOCATION_COMPLETE
+                                               object:nil];
+
+    
+    [[WQWebServiceManager sharedWebServiceManager] getDetailsForMeasurementID:self.measurementID];
+    
     
 	// Do any additional setup after loading the view.
+}
+
+-(void)updateUserInterfaceWithMeasurementDetails:(NSDictionary *)measurementDictionary
+{
+    NSLog(@"Update User Interface Function");
 }
 
 - (void)viewDidDisappear:(BOOL)animated
@@ -73,6 +95,8 @@
     {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
+    
+    
     
     // Configure the cell...
     
