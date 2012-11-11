@@ -131,6 +131,7 @@
                                                            [((NSString *)[object objectForKey:@"longitude"]) doubleValue]);
             annotation.title = [object objectForKey:@"locationName"];
             annotation.subtitle = [NSString stringWithFormat:@"%@%%",[object objectForKey:@"quality"]];
+            annotation.code = [[object objectForKey:@"code"] integerValue];
             [self.map addAnnotation:annotation];
             [annotation release];
         }
