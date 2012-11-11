@@ -11,6 +11,7 @@
 		159E2D95164EB0530087CA15 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 159E2D94164EB0530087CA15 /* CoreLocation.framework */; };
 		159E2DA1164EB5CC0087CA15 /* icon.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 159E2DA0164EB5CC0087CA15 /* icon.PNG */; };
 		159E2DA3164EB6090087CA15 /* icon@2x.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 159E2DA2164EB6090087CA15 /* icon@2x.PNG */; };
+		15D824B3164FB4B1000B6DE4 /* WQAnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D824B2164FB4B1000B6DE4 /* WQAnotation.m */; };
 		3A664B64164FA93F00A9BD39 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A664B63164FA93F00A9BD39 /* Icon.png */; };
 		3A664B67164FA94900A9BD39 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A664B66164FA94900A9BD39 /* Icon@2x.png */; };
 		3A664B69164FA95900A9BD39 /* ItunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A664B68164FA95900A9BD39 /* ItunesArtwork.png */; };
@@ -78,6 +79,8 @@
 		159E2D94164EB0530087CA15 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		159E2DA0164EB5CC0087CA15 /* icon.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.PNG; path = ../icon.PNG; sourceTree = "<group>"; };
 		159E2DA2164EB6090087CA15 /* icon@2x.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.PNG"; path = "../icon@2x.PNG"; sourceTree = "<group>"; };
+		15D824B1164FB4B1000B6DE4 /* WQAnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQAnotation.h; sourceTree = "<group>"; };
+		15D824B2164FB4B1000B6DE4 /* WQAnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQAnotation.m; sourceTree = "<group>"; };
 		3A664B63164FA93F00A9BD39 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		3A664B66164FA94900A9BD39 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		3A664B68164FA95900A9BD39 /* ItunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ItunesArtwork.png; sourceTree = "<group>"; };
@@ -198,6 +201,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		15D824B0164FB4B1000B6DE4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				15D824B1164FB4B1000B6DE4 /* WQAnotation.h */,
+				15D824B2164FB4B1000B6DE4 /* WQAnotation.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		3A664B7C164FB18E00A9BD39 /* For Map */ = {
 			isa = PBXGroup;
 			children = (
@@ -254,6 +266,7 @@
 		3AD6D061164E5CD000AFECEC /* WaterQuality */ = {
 			isa = PBXGroup;
 			children = (
+				15D824B0164FB4B1000B6DE4 /* Views */,
 				159E2D97164EB4600087CA15 /* Resources */,
 				159E2D72164E6C260087CA15 /* Controllers */,
 				159E2D73164E6C260087CA15 /* Model */,
@@ -537,6 +550,7 @@
 				3AD6D11F164EC95F00AFECEC /* WQFuelLikeIndicatorView.m in Sources */,
 				3AF72765164FA01D00B2692B /* SVHTTPClient.m in Sources */,
 				3AF72766164FA01D00B2692B /* SVHTTPRequest.m in Sources */,
+				15D824B3164FB4B1000B6DE4 /* WQAnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

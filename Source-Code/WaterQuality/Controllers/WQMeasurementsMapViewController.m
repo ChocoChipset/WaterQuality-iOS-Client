@@ -8,6 +8,7 @@
 
 #import "WQMeasurementsMapViewController.h"
 #import "WQWebServiceManager.h"
+#import "WQAnotation.h"
 
 @interface WQMeasurementsMapViewController ()
 
@@ -62,21 +63,80 @@
                                                                     notificationKey:K_NOTIFICATION_MEASHUREMENTS_LIST_COMPLETE];
 }
 
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
+{
+    
+}
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
+{
+    MKPinAnnotationView *pinView = (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:@"pinView"];
+    if (!pinView) {
+        pinView = [[[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"pinView"] autorelease];
+        pinView.pinColor = MKPinAnnotationColorRed;
+        pinView.animatesDrop = YES;
+        pinView.canShowCallout = YES;
+        
+        UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+        pinView.rightCalloutAccessoryView = rightButton;
+        if ([annotation isMemberOfClass:[WQAnotation class]]) {
+            UIImageView *image = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
+            image.contentMode = UIViewContentModeScaleAspectFit;
+            image.image = [self mapIconForMeasurementWithCode:((WQAnotation *)annotation).code];
+            pinView.leftCalloutAccessoryView = image;
+            [image release];
+        }
+    } else {
+        pinView.annotation = annotation;
+    }
+    return pinView;
+}
 #pragma mark - pins oeration
 
 - (void)putPins:(NSDictionary *)data
 {
     NSLog(@"%@",[data objectForKey:@"objects"]);
+    
+    
+    NSArray *allAnotations = self.map.annotations;
+    for (WQAnotation *anotation in allAnotations) {
+        bool anotationFound = false;
+        for(NSDictionary *object in [data objectForKey:@"objects"])
+        {
+            if(anotation.coordinate.latitude == [((NSString *)[object objectForKey:@"latitude"]) doubleValue] &&
+               anotation.coordinate.longitude == [((NSString *)[object objectForKey:@"longitude"]) doubleValue])
+            {
+                anotationFound = TRUE;
+            }
+        }
+        if (!anotationFound)
+            [self.map removeAnnotation:anotation];
+    }
+    
+    
     for (NSDictionary *object in [data objectForKey:@"objects"]) {
-        MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
-        annotation.coordinate = CLLocationCoordinate2DMake([((NSString *)[object objectForKey:@"latitude"]) doubleValue],
+        bool anotationFound = false;
+        for(WQAnotation *anotation in self.map.annotations)
+        {
+            if(anotation.coordinate.latitude == [((NSString *)[object objectForKey:@"latitude"]) doubleValue] &&
+               anotation.coordinate.longitude == [((NSString *)[object objectForKey:@"longitude"]) doubleValue])
+            {
+                anotationFound = TRUE;
+            }
+        }
+        
+        if (!anotationFound){
+            WQAnotation *annotation = [[WQAnotation alloc] init];
+            annotation.coordinate = CLLocationCoordinate2DMake([((NSString *)[object objectForKey:@"latitude"]) doubleValue],
                                                            [((NSString *)[object objectForKey:@"longitude"]) doubleValue]);
-        annotation.title = [object objectForKey:@"locationName"];
-        annotation.subtitle = [NSString stringWithFormat:@"%@%%",[object objectForKey:@"quality"] ];
-        [self.map addAnnotation:annotation];
-        [annotation release];
+            annotation.title = [object objectForKey:@"locationName"];
+            annotation.subtitle = [NSString stringWithFormat:@"%@%%",[object objectForKey:@"quality"]];
+            [self.map addAnnotation:annotation];
+            [annotation release];
+        }
     }
 }
+
 
 
 - (void)didReceiveMemoryWarning
