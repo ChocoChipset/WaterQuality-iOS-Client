@@ -9,12 +9,14 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 
+@class WQFuelLikeIndicatorView;
+
 @interface WQMeasurementMainViewController : UIViewController <CLLocationManagerDelegate>
 
 @property (retain, nonatomic) IBOutlet UIImageView *iconImageView;
 @property (retain, nonatomic) IBOutlet UILabel *persentLabel;
 @property (retain, nonatomic) IBOutlet UILabel *placeNameLabel;
 @property (retain, nonatomic) IBOutlet UITextView *descriptionTextView;
-@property (retain, nonatomic) IBOutlet UIView *qualityStripesView;
+@property (retain, nonatomic) IBOutlet WQFuelLikeIndicatorView *qualityStripesView;
 
 @end

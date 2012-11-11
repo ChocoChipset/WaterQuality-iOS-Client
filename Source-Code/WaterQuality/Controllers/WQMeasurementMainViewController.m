@@ -8,6 +8,8 @@
 
 #import "WQMeasurementMainViewController.h"
 #import "WQWebServiceManager.h"
+#import "WQFuelLikeIndicatorView.h"
+
 
 #define kPERCENT_LABEL_RED_LABEL_LIMIT 20
 #define kPERCENT_LABEL_ORANGE_LABEL_LIMIT 40
@@ -22,6 +24,8 @@
 -(void)updateUserInterfaceWithMeasurement:(NSDictionary *)dictionary;
 
 @end
+
+
 
 @implementation WQMeasurementMainViewController
 
@@ -51,40 +55,11 @@
 {
     self.persentLabel.text = [NSString stringWithFormat:@"%d%%", percentage];
     
-    UIColor *persentLabelColor = nil;
+    NSArray *colorsForLabel = [NSArray arrayWithObjects: [UIColor redColor], [UIColor yellowColor], [UIColor orangeColor], [UIColor greenColor], [UIColor greenColor],  nil];
     
-    if (percentage < kPERCENT_LABEL_GREEN_LABEL_LIMIT
-        && percentage >= kPERCENT_LABEL_DARK_GREEN_LABEL_LIMIT)
-    {
-        persentLabelColor = [UIColor greenColor];
-    }
-    else if (percentage < kPERCENT_LABEL_DARK_GREEN_LABEL_LIMIT
-                 && percentage >= kPERCENT_LABEL_YELLOW_LABEL_LIMIT)
-    {
-        persentLabelColor = [UIColor greenColor];
-    }
-    else if (percentage < kPERCENT_LABEL_YELLOW_LABEL_LIMIT
-             && percentage >= kPERCENT_LABEL_ORANGE_LABEL_LIMIT)
-    {
-        persentLabelColor = [UIColor orangeColor];
-    }
-    else if (percentage < kPERCENT_LABEL_ORANGE_LABEL_LIMIT
-             && percentage >= kPERCENT_LABEL_RED_LABEL_LIMIT)
-    {
-        persentLabelColor = [UIColor yellowColor];
-    }
-    else if (percentage < kPERCENT_LABEL_RED_LABEL_LIMIT
-             && percentage >= 0)
-    {
-        persentLabelColor = [UIColor redColor];
-    }
-    else
-    {
-        persentLabelColor = [UIColor darkGrayColor];
-        NSLog(@"Warning: No color available for range.");
-    }
-
-    self.persentLabel.textColor = persentLabelColor;
+    int indexForColorLabel = lroundf(percentage / (100 / [colorsForLabel count]));
+    
+    self.persentLabel.textColor = [colorsForLabel objectAtIndex:indexForColorLabel];
 }
 
 -(void)setIconImageForCode:(NSInteger)code
@@ -106,9 +81,12 @@
 
 -(void)updateUserInterfaceWithMeasurement:(NSDictionary *)dictionary
 {
+    int waterQualityPercentage = [[dictionary valueForKey:@"quality"] intValue];
+    
     [self setIconImageForCode:[[dictionary valueForKey:@"code"] intValue]];
-    [self setPercentLabelForPercentage: [[dictionary valueForKey:@"quality"] intValue]];
-    self.placeNameLabel.text = [dictionary valueForKey:@"locationName"];
+    [self setPercentLabelForPercentage: waterQualityPercentage];
+    [self.qualityStripesView updateFuelIndicatorWithPercent:waterQualityPercentage]
+    ;    self.placeNameLabel.text = [dictionary valueForKey:@"locationName"];
     self.descriptionTextView.text = [dictionary valueForKey:@"comment"];
     
 }

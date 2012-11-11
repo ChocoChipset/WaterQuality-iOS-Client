@@ -29,7 +29,7 @@
             newBar.tag = kFUEL_INDICATOR_BASE_TAG + i;
             newBar.layer.cornerRadius = 7;
             newBar.layer.masksToBounds = YES;
-            newBar.backgroundColor = [UIColor grayColor];
+            newBar.backgroundColor = [UIColor colorWithWhite:0.3 alpha:0.35];
             [self addSubview:newBar];
             
             [newBar release];
@@ -40,9 +40,16 @@
     return self;
 }
 
--(void)updateFuelIndicatorWithPercent:(NSInteger)percent
+-(void)updateFuelIndicatorWithPercent:(NSInteger)percentage
 {
+    int numberOfBarsToColor = lroundf(percentage/self.subviews.count);
     
+    NSArray *colorsForBars = [NSArray arrayWithObjects: [UIColor greenColor], [UIColor greenColor], [UIColor orangeColor], [UIColor yellowColor], [UIColor redColor] , nil];
+    
+    for (int i = kNUMBER_OF_BARS-1 ; i >= kNUMBER_OF_BARS - numberOfBarsToColor ; i--)
+    {
+        ((UIView *)[self.subviews objectAtIndex:i]).backgroundColor = (UIColor *)[colorsForBars objectAtIndex:i];
+    }
 }
 
 @end
