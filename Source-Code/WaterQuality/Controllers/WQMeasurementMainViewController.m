@@ -9,7 +9,7 @@
 #import "WQMeasurementMainViewController.h"
 #import "WQWebServiceManager.h"
 #import "WQFuelLikeIndicatorView.h"
-
+#import "WQMeasurementDetailsViewController.h"
 
 #define kPERCENT_LABEL_RED_LABEL_LIMIT 20
 #define kPERCENT_LABEL_ORANGE_LABEL_LIMIT 40
@@ -21,6 +21,7 @@
 
 -(void)setIconImageForCode:(NSInteger)code;
 -(void)setPercentLabelForPercentage:(NSInteger)percentage;
+
 
 
 @end
@@ -38,7 +39,8 @@
     [_placeNameLabel release];
     [_descriptionTextView release];
     [_qualityStripesView release];
-
+    [_displayedMeasurement release];
+    
     [super dealloc];
 }
 
@@ -50,6 +52,28 @@
     }
     return self;
 }
+
+-(void)presentMeasurementsDetails:(id)sender
+{
+    [self performSegueWithIdentifier:kSEGUE_PRESENT_MEASUREMENTS_DETAILS sender:sender];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    UIViewController *targetView = nil;
+    
+    if ([segue.identifier isEqualToString:kSEGUE_PRESENT_MEASUREMENTS_DETAILS])
+    {
+        ((WQMeasurementDetailsViewController *)[segue destinationViewController]).measurementID = [self.displayedMeasurement valueForKey:@"pk"];
+        
+    }
+    else
+    {
+        NSLog(@"Unrecognized Segue");
+        
+    }
+}
+
 
 -(void)setPercentLabelForPercentage:(NSInteger)percentage
 {
@@ -81,6 +105,8 @@
 
 -(void)updateUserInterfaceWithMeasurement:(NSDictionary *)dictionary
 {
+    self.displayedMeasurement = dictionary;
+    
     int waterQualityPercentage = [[dictionary valueForKey:@"quality"] intValue];
     
     [self setIconImageForCode:[[dictionary valueForKey:@"code"] intValue]];

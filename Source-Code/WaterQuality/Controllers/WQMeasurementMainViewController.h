@@ -20,7 +20,10 @@
 @property (retain, nonatomic) IBOutlet UILabel *placeNameLabel;
 @property (retain, nonatomic) IBOutlet UITextView *descriptionTextView;
 @property (retain, nonatomic) IBOutlet WQFuelLikeIndicatorView *qualityStripesView;
+@property (nonatomic, retain) NSDictionary *displayedMeasurement;
 
 -(void)updateUserInterfaceWithMeasurement:(NSDictionary *)dictionary;
+-(IBAction)presentMeasurementsDetails:(id)sender;
+
 
 @end
