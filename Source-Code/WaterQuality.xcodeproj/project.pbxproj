@@ -11,8 +11,6 @@
 		159E2D95164EB0530087CA15 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 159E2D94164EB0530087CA15 /* CoreLocation.framework */; };
 		159E2DA1164EB5CC0087CA15 /* icon.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 159E2DA0164EB5CC0087CA15 /* icon.PNG */; };
 		159E2DA3164EB6090087CA15 /* icon@2x.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 159E2DA2164EB6090087CA15 /* icon@2x.PNG */; };
-		3A6A3548164F9CD400C97623 /* SVHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A3545164F9CD400C97623 /* SVHTTPClient.m */; };
-		3A6A3549164F9CD400C97623 /* SVHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A3547164F9CD400C97623 /* SVHTTPRequest.m */; };
 		3AD6D05C164E5CD000AFECEC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD6D05B164E5CD000AFECEC /* UIKit.framework */; };
 		3AD6D05E164E5CD000AFECEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD6D05D164E5CD000AFECEC /* Foundation.framework */; };
 		3AD6D060164E5CD000AFECEC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD6D05F164E5CD000AFECEC /* CoreGraphics.framework */; };
@@ -41,6 +39,8 @@
 		3AD6D11B164EC7C700AFECEC /* Background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD6D119164EC7C700AFECEC /* Background@2x.png */; };
 		3AD6D11F164EC95F00AFECEC /* WQFuelLikeIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6D11E164EC95E00AFECEC /* WQFuelLikeIndicatorView.m */; };
 		3AD6D122164ED2C000AFECEC /* CodeIcon_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD6D121164ED2C000AFECEC /* CodeIcon_0.png */; };
+		3AF72765164FA01D00B2692B /* SVHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF72762164FA01D00B2692B /* SVHTTPClient.m */; };
+		3AF72766164FA01D00B2692B /* SVHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF72764164FA01D00B2692B /* SVHTTPRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,10 +58,6 @@
 		159E2D94164EB0530087CA15 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		159E2DA0164EB5CC0087CA15 /* icon.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.PNG; path = ../icon.PNG; sourceTree = "<group>"; };
 		159E2DA2164EB6090087CA15 /* icon@2x.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.PNG"; path = "../icon@2x.PNG"; sourceTree = "<group>"; };
-		3A6A3544164F9CD400C97623 /* SVHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SVHTTPClient.h; path = ../../SVHTTPRequest/SVHTTPClient.h; sourceTree = "<group>"; };
-		3A6A3545164F9CD400C97623 /* SVHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SVHTTPClient.m; path = ../../SVHTTPRequest/SVHTTPClient.m; sourceTree = "<group>"; };
-		3A6A3546164F9CD400C97623 /* SVHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SVHTTPRequest.h; path = ../../SVHTTPRequest/SVHTTPRequest.h; sourceTree = "<group>"; };
-		3A6A3547164F9CD400C97623 /* SVHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SVHTTPRequest.m; path = ../../SVHTTPRequest/SVHTTPRequest.m; sourceTree = "<group>"; };
 		3AD6D057164E5CD000AFECEC /* WaterQuality.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaterQuality.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AD6D05B164E5CD000AFECEC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3AD6D05D164E5CD000AFECEC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -105,6 +101,10 @@
 		3AD6D11D164EC95E00AFECEC /* WQFuelLikeIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQFuelLikeIndicatorView.h; sourceTree = "<group>"; };
 		3AD6D11E164EC95E00AFECEC /* WQFuelLikeIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQFuelLikeIndicatorView.m; sourceTree = "<group>"; };
 		3AD6D121164ED2C000AFECEC /* CodeIcon_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CodeIcon_0.png; sourceTree = "<group>"; };
+		3AF72761164FA01D00B2692B /* SVHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVHTTPClient.h; sourceTree = "<group>"; };
+		3AF72762164FA01D00B2692B /* SVHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVHTTPClient.m; sourceTree = "<group>"; };
+		3AF72763164FA01D00B2692B /* SVHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVHTTPRequest.h; sourceTree = "<group>"; };
+		3AF72764164FA01D00B2692B /* SVHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVHTTPRequest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,9 +180,9 @@
 		3AD6D05A164E5CD000AFECEC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3AD6D0A8164E671A00AFECEC /* Third Parties */,
 				159E2D94164EB0530087CA15 /* CoreLocation.framework */,
 				159E2D82164E79660087CA15 /* MapKit.framework */,
-				3AD6D0A8164E671A00AFECEC /* Third Parties */,
 				3AD6D05B164E5CD000AFECEC /* UIKit.framework */,
 				3AD6D05D164E5CD000AFECEC /* Foundation.framework */,
 				3AD6D05F164E5CD000AFECEC /* CoreGraphics.framework */,
@@ -246,6 +246,7 @@
 		3AD6D0A8164E671A00AFECEC /* Third Parties */ = {
 			isa = PBXGroup;
 			children = (
+				3AF72760164FA00100B2692B /* SVHTTPRequest */,
 				3AD6D0AA164E6ACB00AFECEC /* SVHTTPRequest */,
 			);
 			name = "Third Parties";
@@ -254,10 +255,6 @@
 		3AD6D0AA164E6ACB00AFECEC /* SVHTTPRequest */ = {
 			isa = PBXGroup;
 			children = (
-				3A6A3544164F9CD400C97623 /* SVHTTPClient.h */,
-				3A6A3545164F9CD400C97623 /* SVHTTPClient.m */,
-				3A6A3546164F9CD400C97623 /* SVHTTPRequest.h */,
-				3A6A3547164F9CD400C97623 /* SVHTTPRequest.m */,
 				3AD6D0CD164E780600AFECEC /* SVHTTPWQClient.h */,
 				3AD6D0CE164E780600AFECEC /* SVHTTPWQClient.m */,
 			);
@@ -309,6 +306,17 @@
 				3AD6D121164ED2C000AFECEC /* CodeIcon_0.png */,
 			);
 			path = Codes;
+			sourceTree = "<group>";
+		};
+		3AF72760164FA00100B2692B /* SVHTTPRequest */ = {
+			isa = PBXGroup;
+			children = (
+				3AF72761164FA01D00B2692B /* SVHTTPClient.h */,
+				3AF72762164FA01D00B2692B /* SVHTTPClient.m */,
+				3AF72763164FA01D00B2692B /* SVHTTPRequest.h */,
+				3AF72764164FA01D00B2692B /* SVHTTPRequest.m */,
+			);
+			name = SVHTTPRequest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -439,8 +447,8 @@
 				3AD6D0E0164E820500AFECEC /* WQMeasurementsAbstractViewController.m in Sources */,
 				3AD6D0E3164E8E9E00AFECEC /* WQWebServiceManager.m in Sources */,
 				3AD6D11F164EC95F00AFECEC /* WQFuelLikeIndicatorView.m in Sources */,
-				3A6A3548164F9CD400C97623 /* SVHTTPClient.m in Sources */,
-				3A6A3549164F9CD400C97623 /* SVHTTPRequest.m in Sources */,
+				3AF72765164FA01D00B2692B /* SVHTTPClient.m in Sources */,
+				3AF72766164FA01D00B2692B /* SVHTTPRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
