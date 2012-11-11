@@ -14,7 +14,7 @@
 
 - (void)getListOfMeasurementsForLocation:(CLLocation *)location
                              withinRadio:(NSInteger)radioInMeters
-                         resultLimitedTo:(NSInteger)limit
+                         resultLimitedTo:(NSString *)limit
                          notificationKey:(NSString *)notificationKey;
 
 
@@ -43,7 +43,8 @@ static WQWebServiceManager *static_WebServiceManager = nil;
     
     if (self = [super init])
     {
-        self.radio = kRADIO_BY_DEFAULT_DEGREE;
+        self.radioLongitude = kRADIO_BY_DEFAULT_DEGREE;
+        self.radioLatitude = kRADIO_BY_DEFAULT_DEGREE;
         _locationPoint = [[CLLocation alloc] initWithLatitude:kDEFAULT_LATITUDE_ longitude:kDEFAULT_LONGITUDE_];
     }
     return self;
@@ -54,7 +55,7 @@ static WQWebServiceManager *static_WebServiceManager = nil;
 {
     [self getListOfMeasurementsForLocation:location
                                withinRadio:kRADIO_BY_DEFAULT_DEGREE
-                           resultLimitedTo:1
+                           resultLimitedTo:@"1"
                            notificationKey:K_NOTIFICATION_MEASHUREMENT_FOR_LOCATION_COMPLETE];
    
 }
@@ -76,7 +77,7 @@ static WQWebServiceManager *static_WebServiceManager = nil;
 
 - (void)getListOfMeasurementsForLocation:(CLLocation *)location
                              withinRadio:(NSInteger)radioInMeters
-                         resultLimitedTo:(NSInteger)limit
+                         resultLimitedTo:(NSString*)limit
 {
     [self getListOfMeasurementsForLocation:location
                                withinRadio:radioInMeters
@@ -85,8 +86,53 @@ static WQWebServiceManager *static_WebServiceManager = nil;
 }
 
 - (void)getListOfMeasurementsForLocation:(CLLocation *)location
+                    withinRadioLongitude:(double)degreesLongitude
+                     withinRadioLatitude:(double)degreesLatitude
+                         resultLimitedTo:(NSString*)limit
+                         notificationKey:(NSString *)notificationKey
+{
+    {
+        self.locationPoint = location;
+        self.radioLatitude = degreesLatitude;
+        self.radioLongitude = degreesLongitude;
+        
+        NSString *getCall = [NSString stringWithFormat:@"/v1/measurements/%f/%f/%f/%f/",
+                             location.coordinate.latitude,
+                             location.coordinate.longitude,
+                             degreesLatitude,
+                             degreesLongitude];
+        
+        NSArray *parameterKeys = [NSArray arrayWithObjects:kPARAMETER_KEY_FOR_OFFSET, kPARAMETER_KEY_FOR_LIMIT, nil];
+        
+        NSArray *parameterValues = [NSArray arrayWithObjects:@"0", limit, nil];
+        
+        
+        NSDictionary *parametersDictionary = [NSDictionary dictionaryWithObjects:parameterValues
+                                                                         forKeys:parameterKeys];
+        
+        [[SVHTTPWQClient sharedClient] GET:getCall
+                                parameters:parametersDictionary
+                                completion:^(id response, NSHTTPURLResponse *urlResponse, NSError *error) {
+                                    
+                                    id resultingObject = nil;
+                                    
+                                    if (!error)
+                                    {
+                                        resultingObject = response;
+                                    }
+                                    NSLog(@"Response (%@) %@. Error %@", [response class], response, error);
+                                    
+                                    [[NSNotificationCenter defaultCenter] postNotificationName:notificationKey
+                                                                                        object:self
+                                                                                      userInfo:resultingObject];
+                                }];
+    }
+
+}
+
+/*- (void)getListOfMeasurementsForLocation:(CLLocation *)location
                              withinRadio:(NSInteger)radioInMeters
-                         resultLimitedTo:(NSInteger)limit
+                         resultLimitedTo:(NSString *)limit
                          notificationKey:(NSString *)notificationKey
 {
     self.locationPoint = location;
@@ -101,7 +147,7 @@ static WQWebServiceManager *static_WebServiceManager = nil;
     
     NSArray *parameterKeys = [NSArray arrayWithObjects:kPARAMETER_KEY_FOR_OFFSET, kPARAMETER_KEY_FOR_LIMIT, nil];
     
-    NSArray *parameterValues = [NSArray arrayWithObjects:@"0", kDEFAULT_LIMIT_FOR_MEASUREMENTS, nil];
+    NSArray *parameterValues = [NSArray arrayWithObjects:@"0", limit, nil];
     
     
     NSDictionary *parametersDictionary = [NSDictionary dictionaryWithObjects:parameterValues
@@ -123,7 +169,7 @@ static WQWebServiceManager *static_WebServiceManager = nil;
                                                                                     object:self
                                                                                   userInfo:resultingObject];
                             }];
-}
+}*/
 
 
 - (void)dealloc
