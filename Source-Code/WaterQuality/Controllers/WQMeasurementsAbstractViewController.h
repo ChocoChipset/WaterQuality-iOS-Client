@@ -10,7 +10,7 @@
 
 @interface WQMeasurementsAbstractViewController : UIViewController
 
-
+-(UIImage *)listIconForMeasurementWithCode:(NSInteger)theCode;
 -(UIImage *)mapIconForMeasurementWithCode:(NSInteger)theCode;
 
 @end

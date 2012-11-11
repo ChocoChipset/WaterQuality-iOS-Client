@@ -222,36 +222,6 @@
     <resources>
         <image name="Background.png" width="320" height="480"/>
     </resources>
-    <classes>
-        <class className="WQFuelLikeIndicatorView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WQFuelLikeIndicatorView.h"/>
-        </class>
-        <class className="WQMeasurementMainViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WQMeasurementMainViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="descriptionTextView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="iconImageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="persentLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="placeNameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="qualityStripesView" candidateClass="UIView"/>
-            </relationships>
-        </class>
-        <class className="WQMeasurementsAbstractViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WQMeasurementsAbstractViewController.h"/>
-        </class>
-        <class className="WQMeasurementsListViewController" superclassName="WQMeasurementsAbstractViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WQMeasurementsListViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="WQMeasurementsMapViewController" superclassName="WQMeasurementsAbstractViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WQMeasurementsMapViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="map" candidateClass="MKMapView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

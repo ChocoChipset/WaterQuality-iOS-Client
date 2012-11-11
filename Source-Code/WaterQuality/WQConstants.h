@@ -42,8 +42,7 @@
 #define kDEFAULT_LIMIT_FOR_MEASUREMENTS @"35"
 /* ------------------------------------------------------------------------- */
 
-#define kPERCENT_LABEL_RED_LABEL_LIMIT 20
-#define kPERCENT_LABEL_ORANGE_LABEL_LIMIT 40
-#define kPERCENT_LABEL_YELLOW_LABEL_LIMIT 60
-#define kPERCENT_LABEL_DARK_GREEN_LABEL_LIMIT 80
-#define kPERCENT_LABEL_GREEN_LABEL_LIMIT 100
+#define kCODE_ICON_NAME_PREFIX @"CodeIcon_"
+#define kCODE_ICON_NAME_SUFFIX_LIST @"_list"
+#define kCODE_ICON_NAME_SUFFIX_MAP @"_map"
+#define kCODE_ICON_NAME_DEFAULT_INDEX 0
