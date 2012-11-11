@@ -64,18 +64,18 @@
 
 -(void)setIconImageForCode:(NSInteger)code
 {
-    NSString *iconImageName = @"CodeIcon_0";
+    NSString *iconImageName = [NSString stringWithFormat:@"%@%d", kCODE_ICON_NAME_PREFIX, code];
     
-    if (code == 0)
+    UIImage *result = [UIImage imageNamed:iconImageName];
+    
+    if (!result)
     {
-        
-    }
-    else
-    {
+        iconImageName = [NSString stringWithFormat:@"%@%d", kCODE_ICON_NAME_PREFIX, kCODE_ICON_NAME_DEFAULT_INDEX];
+        result = [UIImage imageNamed:iconImageName];
         NSLog(@"Warning: Unrecognized Code Image");
     }
-    
-    self.iconImageView.image = [UIImage imageNamed:iconImageName];
+
+    self.iconImageView.image = result;
     
 }
 

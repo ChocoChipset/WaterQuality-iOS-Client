@@ -8,7 +8,7 @@
 
 #import "WQMeasurementsAbstractViewController.h"
 
-@interface WQMeasurementsAbstractViewController ()
+@interface WQMeasurementsAbstractViewController (Private)
 
 @end
 
@@ -35,20 +35,21 @@
     // Dispose of any resources that can be recreated.
 }
 
--(UIImage *)mapIconForMeasurementWithCode:(NSInteger)theCode
+-(UIImage *)mapIconForMeasurementWithCode:(NSInteger)code
 {
-    NSString *iconImageName = @"CodeIcon_0";
+    NSString *iconImageName = [NSString stringWithFormat:@"%@%d%@", kCODE_ICON_NAME_PREFIX, code, kCODE_ICON_NAME_SUFFIX_MAP];
     
-    if (theCode == 0)
+    UIImage *result = [UIImage imageNamed:iconImageName];
+    
+    if (!result)
     {
-        
-    }
-    else
-    {
-        NSLog(@"Warning: Unrecognized Code Image");
+        iconImageName = [NSString stringWithFormat:@"%@%d%@", kCODE_ICON_NAME_PREFIX, kCODE_ICON_NAME_DEFAULT_INDEX, kCODE_ICON_NAME_SUFFIX_MAP];
+        result = [UIImage imageNamed:iconImageName];
+        NSLog(@"Warning: Unrecognized Code Image for Map");
     }
     
-    return [UIImage imageNamed:iconImageName];
+    return result;
+
     
 }
 
