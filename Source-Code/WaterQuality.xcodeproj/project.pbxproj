@@ -33,6 +33,10 @@
 		3A664B8A164FB19500A9BD39 /* CodeIcon_5_map.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A664B82164FB19500A9BD39 /* CodeIcon_5_map.png */; };
 		3A664B8B164FB19500A9BD39 /* CodeIcon_6_map.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A664B83164FB19500A9BD39 /* CodeIcon_6_map.png */; };
 		3A664B8C164FB19500A9BD39 /* CodeIcon_7_map.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A664B84164FB19500A9BD39 /* CodeIcon_7_map.png */; };
+		3AA0514D164FBA620009C7CA /* TabIcon-WaterHere.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AA05149164FBA620009C7CA /* TabIcon-WaterHere.png */; };
+		3AA0514E164FBA620009C7CA /* TabIcon-WaterHere@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AA0514A164FBA620009C7CA /* TabIcon-WaterHere@2x.png */; };
+		3AA0514F164FBA620009C7CA /* TabIcon-WaterMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AA0514B164FBA620009C7CA /* TabIcon-WaterMap.png */; };
+		3AA05150164FBA620009C7CA /* TabIcon-WaterMap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AA0514C164FBA620009C7CA /* TabIcon-WaterMap@2x.png */; };
 		3AD6D05C164E5CD000AFECEC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD6D05B164E5CD000AFECEC /* UIKit.framework */; };
 		3AD6D05E164E5CD000AFECEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD6D05D164E5CD000AFECEC /* Foundation.framework */; };
 		3AD6D060164E5CD000AFECEC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD6D05F164E5CD000AFECEC /* CoreGraphics.framework */; };
@@ -104,6 +108,10 @@
 		3A664B82164FB19500A9BD39 /* CodeIcon_5_map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CodeIcon_5_map.png; path = Map/CodeIcon_5_map.png; sourceTree = "<group>"; };
 		3A664B83164FB19500A9BD39 /* CodeIcon_6_map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CodeIcon_6_map.png; path = Map/CodeIcon_6_map.png; sourceTree = "<group>"; };
 		3A664B84164FB19500A9BD39 /* CodeIcon_7_map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CodeIcon_7_map.png; path = Map/CodeIcon_7_map.png; sourceTree = "<group>"; };
+		3AA05149164FBA620009C7CA /* TabIcon-WaterHere.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TabIcon-WaterHere.png"; sourceTree = "<group>"; };
+		3AA0514A164FBA620009C7CA /* TabIcon-WaterHere@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TabIcon-WaterHere@2x.png"; sourceTree = "<group>"; };
+		3AA0514B164FBA620009C7CA /* TabIcon-WaterMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TabIcon-WaterMap.png"; sourceTree = "<group>"; };
+		3AA0514C164FBA620009C7CA /* TabIcon-WaterMap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TabIcon-WaterMap@2x.png"; sourceTree = "<group>"; };
 		3AD6D057164E5CD000AFECEC /* WaterQuality.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaterQuality.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AD6D05B164E5CD000AFECEC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3AD6D05D164E5CD000AFECEC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -235,6 +243,17 @@
 				3A664B84164FB19500A9BD39 /* CodeIcon_7_map.png */,
 			);
 			name = "For Map";
+			sourceTree = "<group>";
+		};
+		3AA05148164FBA590009C7CA /* Tab Icons */ = {
+			isa = PBXGroup;
+			children = (
+				3AA05149164FBA620009C7CA /* TabIcon-WaterHere.png */,
+				3AA0514A164FBA620009C7CA /* TabIcon-WaterHere@2x.png */,
+				3AA0514B164FBA620009C7CA /* TabIcon-WaterMap.png */,
+				3AA0514C164FBA620009C7CA /* TabIcon-WaterMap@2x.png */,
+			);
+			name = "Tab Icons";
 			sourceTree = "<group>";
 		};
 		3AD6D04C164E5CD000AFECEC = {
@@ -379,6 +398,7 @@
 		3AD6D117164EC7C700AFECEC /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3AA05148164FBA590009C7CA /* Tab Icons */,
 				3AD6D120164ED2C000AFECEC /* Codes */,
 				3AD6D118164EC7C700AFECEC /* Background.png */,
 				3AD6D119164EC7C700AFECEC /* Background@2x.png */,
@@ -516,6 +536,10 @@
 				3A664B8A164FB19500A9BD39 /* CodeIcon_5_map.png in Resources */,
 				3A664B8B164FB19500A9BD39 /* CodeIcon_6_map.png in Resources */,
 				3A664B8C164FB19500A9BD39 /* CodeIcon_7_map.png in Resources */,
+				3AA0514D164FBA620009C7CA /* TabIcon-WaterHere.png in Resources */,
+				3AA0514E164FBA620009C7CA /* TabIcon-WaterHere@2x.png in Resources */,
+				3AA0514F164FBA620009C7CA /* TabIcon-WaterMap.png in Resources */,
+				3AA05150164FBA620009C7CA /* TabIcon-WaterMap@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
