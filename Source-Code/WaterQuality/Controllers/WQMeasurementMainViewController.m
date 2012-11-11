@@ -97,9 +97,12 @@
     
     self.title = @"Water Quality Here";
     
-    CLLocationManager *locationManager = [[CLLocationManager alloc] init];
-    locationManager.delegate = self;
-    [locationManager startMonitoringSignificantLocationChanges];
+    if (!self.dontCalculateUserLocation)
+    {
+        CLLocationManager *locationManager = [[CLLocationManager alloc] init];
+        locationManager.delegate = self;
+        [locationManager startMonitoringSignificantLocationChanges];
+    }
     
 	// Do any additional setup after loading the view.
 }
@@ -122,6 +125,18 @@
 
 
 #pragma mark - LocationManager
+
+- (void)locationManager:(CLLocationManager *)manager
+    didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(receivedWebServiceManagerNotification:)
+                                                 name:K_NOTIFICATION_MEASHUREMENT_FOR_LOCATION_COMPLETE
+                                               object:nil];
+    
+    [[WQWebServiceManager sharedWebServiceManager] getMeasurementForLocation:newLocation];
+    
+}
 
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {

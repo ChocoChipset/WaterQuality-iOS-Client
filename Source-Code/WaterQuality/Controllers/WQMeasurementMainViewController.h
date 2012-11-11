@@ -13,6 +13,8 @@
 
 @interface WQMeasurementMainViewController : UIViewController <CLLocationManagerDelegate>
 
+@property (assign, nonatomic) BOOL dontCalculateUserLocation;   // this is nasty. :S
+
 @property (retain, nonatomic) IBOutlet UIImageView *iconImageView;
 @property (retain, nonatomic) IBOutlet UILabel *persentLabel;
 @property (retain, nonatomic) IBOutlet UILabel *placeNameLabel;
