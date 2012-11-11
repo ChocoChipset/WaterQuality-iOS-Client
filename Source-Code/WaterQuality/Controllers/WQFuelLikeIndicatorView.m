@@ -44,7 +44,7 @@
 {
     int numberOfBarsToColor = lroundf(percentage/(100/self.subviews.count));
     
-    NSArray *colorsForBars = [NSArray arrayWithObjects: [UIColor greenColor], [UIColor greenColor], [UIColor orangeColor], [UIColor yellowColor], [UIColor redColor] , nil];
+    NSArray *colorsForBars = [NSArray arrayWithObjects: [UIColor greenColor], [UIColor greenColor],  [UIColor yellowColor], [UIColor orangeColor], [UIColor redColor] , nil];
     
     for (int i = kNUMBER_OF_BARS-1 ; i >= kNUMBER_OF_BARS - numberOfBarsToColor ; i--)
     {
