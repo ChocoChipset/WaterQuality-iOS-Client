@@ -11,6 +11,8 @@
 		159E2D95164EB0530087CA15 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 159E2D94164EB0530087CA15 /* CoreLocation.framework */; };
 		159E2DA1164EB5CC0087CA15 /* icon.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 159E2DA0164EB5CC0087CA15 /* icon.PNG */; };
 		159E2DA3164EB6090087CA15 /* icon@2x.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 159E2DA2164EB6090087CA15 /* icon@2x.PNG */; };
+		3A6A3540164F9C4300C97623 /* SVHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A353D164F9C4300C97623 /* SVHTTPClient.m */; };
+		3A6A3541164F9C4300C97623 /* SVHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A353F164F9C4300C97623 /* SVHTTPRequest.m */; };
 		3AD6D05C164E5CD000AFECEC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD6D05B164E5CD000AFECEC /* UIKit.framework */; };
 		3AD6D05E164E5CD000AFECEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD6D05D164E5CD000AFECEC /* Foundation.framework */; };
 		3AD6D060164E5CD000AFECEC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD6D05F164E5CD000AFECEC /* CoreGraphics.framework */; };
@@ -27,8 +29,6 @@
 		3AD6D090164E5CD100AFECEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD6D05D164E5CD000AFECEC /* Foundation.framework */; };
 		3AD6D098164E5CD100AFECEC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3AD6D096164E5CD100AFECEC /* InfoPlist.strings */; };
 		3AD6D09B164E5CD100AFECEC /* WaterQualityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6D09A164E5CD100AFECEC /* WaterQualityTests.m */; };
-		3AD6D0AF164E6ACB00AFECEC /* SVHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6D0AC164E6ACB00AFECEC /* SVHTTPClient.m */; };
-		3AD6D0B0164E6ACB00AFECEC /* SVHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6D0AE164E6ACB00AFECEC /* SVHTTPRequest.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		3AD6D0BD164E723200AFECEC /* WQMeasurementsFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6D0BC164E723200AFECEC /* WQMeasurementsFilterViewController.m */; };
 		3AD6D0C1164E728300AFECEC /* WQMeasurementsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6D0C0164E728300AFECEC /* WQMeasurementsListViewController.m */; };
 		3AD6D0C4164E72A200AFECEC /* WQMeasurementsMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6D0C3164E72A200AFECEC /* WQMeasurementsMapViewController.m */; };
@@ -58,6 +58,10 @@
 		159E2D94164EB0530087CA15 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		159E2DA0164EB5CC0087CA15 /* icon.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.PNG; path = ../icon.PNG; sourceTree = "<group>"; };
 		159E2DA2164EB6090087CA15 /* icon@2x.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.PNG"; path = "../icon@2x.PNG"; sourceTree = "<group>"; };
+		3A6A353C164F9C4300C97623 /* SVHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SVHTTPClient.h; path = ../../SVHTTPRequest/SVHTTPClient.h; sourceTree = "<group>"; };
+		3A6A353D164F9C4300C97623 /* SVHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SVHTTPClient.m; path = ../../SVHTTPRequest/SVHTTPClient.m; sourceTree = "<group>"; };
+		3A6A353E164F9C4300C97623 /* SVHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SVHTTPRequest.h; path = ../../SVHTTPRequest/SVHTTPRequest.h; sourceTree = "<group>"; };
+		3A6A353F164F9C4300C97623 /* SVHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SVHTTPRequest.m; path = ../../SVHTTPRequest/SVHTTPRequest.m; sourceTree = "<group>"; };
 		3AD6D057164E5CD000AFECEC /* WaterQuality.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaterQuality.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AD6D05B164E5CD000AFECEC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3AD6D05D164E5CD000AFECEC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -79,10 +83,6 @@
 		3AD6D097164E5CD100AFECEC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3AD6D099164E5CD100AFECEC /* WaterQualityTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaterQualityTests.h; sourceTree = "<group>"; };
 		3AD6D09A164E5CD100AFECEC /* WaterQualityTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaterQualityTests.m; sourceTree = "<group>"; };
-		3AD6D0AB164E6ACB00AFECEC /* SVHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVHTTPClient.h; sourceTree = "<group>"; };
-		3AD6D0AC164E6ACB00AFECEC /* SVHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVHTTPClient.m; sourceTree = "<group>"; };
-		3AD6D0AD164E6ACB00AFECEC /* SVHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVHTTPRequest.h; sourceTree = "<group>"; };
-		3AD6D0AE164E6ACB00AFECEC /* SVHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVHTTPRequest.m; sourceTree = "<group>"; };
 		3AD6D0BB164E723200AFECEC /* WQMeasurementsFilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQMeasurementsFilterViewController.h; sourceTree = "<group>"; };
 		3AD6D0BC164E723200AFECEC /* WQMeasurementsFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQMeasurementsFilterViewController.m; sourceTree = "<group>"; };
 		3AD6D0BF164E728300AFECEC /* WQMeasurementsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQMeasurementsListViewController.h; sourceTree = "<group>"; };
@@ -254,10 +254,10 @@
 		3AD6D0AA164E6ACB00AFECEC /* SVHTTPRequest */ = {
 			isa = PBXGroup;
 			children = (
-				3AD6D0AB164E6ACB00AFECEC /* SVHTTPClient.h */,
-				3AD6D0AC164E6ACB00AFECEC /* SVHTTPClient.m */,
-				3AD6D0AD164E6ACB00AFECEC /* SVHTTPRequest.h */,
-				3AD6D0AE164E6ACB00AFECEC /* SVHTTPRequest.m */,
+				3A6A353C164F9C4300C97623 /* SVHTTPClient.h */,
+				3A6A353D164F9C4300C97623 /* SVHTTPClient.m */,
+				3A6A353E164F9C4300C97623 /* SVHTTPRequest.h */,
+				3A6A353F164F9C4300C97623 /* SVHTTPRequest.m */,
 				3AD6D0CD164E780600AFECEC /* SVHTTPWQClient.h */,
 				3AD6D0CE164E780600AFECEC /* SVHTTPWQClient.m */,
 			);
@@ -430,8 +430,6 @@
 			files = (
 				3AD6D068164E5CD000AFECEC /* main.m in Sources */,
 				3AD6D06C164E5CD000AFECEC /* WQAppDelegate.m in Sources */,
-				3AD6D0AF164E6ACB00AFECEC /* SVHTTPClient.m in Sources */,
-				3AD6D0B0164E6ACB00AFECEC /* SVHTTPRequest.m in Sources */,
 				3AD6D0BD164E723200AFECEC /* WQMeasurementsFilterViewController.m in Sources */,
 				3AD6D0C1164E728300AFECEC /* WQMeasurementsListViewController.m in Sources */,
 				3AD6D0C4164E72A200AFECEC /* WQMeasurementsMapViewController.m in Sources */,
@@ -449,6 +447,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AD6D09B164E5CD100AFECEC /* WaterQualityTests.m in Sources */,
+				3A6A3540164F9C4300C97623 /* SVHTTPClient.m in Sources */,
+				3A6A3541164F9C4300C97623 /* SVHTTPRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
