@@ -21,4 +21,6 @@
 @property (retain, nonatomic) IBOutlet UITextView *descriptionTextView;
 @property (retain, nonatomic) IBOutlet WQFuelLikeIndicatorView *qualityStripesView;
 
+-(void)updateUserInterfaceWithMeasurement:(NSDictionary *)dictionary;
+
 @end

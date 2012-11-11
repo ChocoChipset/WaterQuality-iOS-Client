@@ -4,11 +4,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1929"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller - Details-->
+        <!--Navigation Controller - Water Here-->
         <scene sceneID="9v7-Y9-mY3">
             <objects>
                 <navigationController definesPresentationContext="YES" id="Zyx-MF-bS5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Details" id="LEE-gM-K0G"/>
+                    <tabBarItem key="tabBarItem" title="Water Here" image="TabIcon-WaterHere.png" id="LEE-gM-K0G"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="cTz-8H-t5S">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.76000000000000001" green="0.77333333333333343" blue="0.80000000000000004" alpha="1" colorSpace="deviceRGB"/>
@@ -66,7 +66,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="My Water" id="ZQ5-rV-iLr"/>
+                    <tabBarItem key="tabBarItem" title="My Water" image="TabIcon-WaterHere.png" id="ZQ5-rV-iLr"/>
                     <navigationItem key="navigationItem" id="3qS-ia-54D">
                         <barButtonItem key="rightBarButtonItem" title="Details" id="B7p-Px-5PZ">
                             <connections>
@@ -120,7 +120,7 @@
         <scene sceneID="8Yn-uU-XmV">
             <objects>
                 <navigationController definesPresentationContext="YES" id="u5s-dk-cbW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Map" id="Twb-LP-J91"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="TabIcon-WaterMap.png" id="Twb-LP-J91"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="LGB-Ii-GL7">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -221,7 +221,39 @@
     </scenes>
     <resources>
         <image name="Background.png" width="320" height="480"/>
+        <image name="TabIcon-WaterHere.png" width="17" height="30"/>
+        <image name="TabIcon-WaterMap.png" width="30" height="30"/>
     </resources>
+    <classes>
+        <class className="WQFuelLikeIndicatorView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WQFuelLikeIndicatorView.h"/>
+        </class>
+        <class className="WQMeasurementMainViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WQMeasurementMainViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="descriptionTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="iconImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="persentLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="placeNameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="qualityStripesView" candidateClass="WQFuelLikeIndicatorView"/>
+            </relationships>
+        </class>
+        <class className="WQMeasurementsAbstractViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WQMeasurementsAbstractViewController.h"/>
+        </class>
+        <class className="WQMeasurementsListViewController" superclassName="WQMeasurementsAbstractViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WQMeasurementsListViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="WQMeasurementsMapViewController" superclassName="WQMeasurementsAbstractViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WQMeasurementsMapViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="map" candidateClass="MKMapView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

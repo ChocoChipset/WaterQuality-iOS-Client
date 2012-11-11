@@ -21,7 +21,7 @@
 
 -(void)setIconImageForCode:(NSInteger)code;
 -(void)setPercentLabelForPercentage:(NSInteger)percentage;
--(void)updateUserInterfaceWithMeasurement:(NSDictionary *)dictionary;
+
 
 @end
 
