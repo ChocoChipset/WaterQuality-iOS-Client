@@ -37,6 +37,7 @@
 		3AA0514E164FBA620009C7CA /* TabIcon-WaterHere@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AA0514A164FBA620009C7CA /* TabIcon-WaterHere@2x.png */; };
 		3AA0514F164FBA620009C7CA /* TabIcon-WaterMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AA0514B164FBA620009C7CA /* TabIcon-WaterMap.png */; };
 		3AA05150164FBA620009C7CA /* TabIcon-WaterMap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AA0514C164FBA620009C7CA /* TabIcon-WaterMap@2x.png */; };
+		3AA05182164FD19C0009C7CA /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA05181164FD19C0009C7CA /* UIColor+Hex.m */; };
 		3AD6D05C164E5CD000AFECEC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD6D05B164E5CD000AFECEC /* UIKit.framework */; };
 		3AD6D05E164E5CD000AFECEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD6D05D164E5CD000AFECEC /* Foundation.framework */; };
 		3AD6D060164E5CD000AFECEC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD6D05F164E5CD000AFECEC /* CoreGraphics.framework */; };
@@ -112,6 +113,8 @@
 		3AA0514A164FBA620009C7CA /* TabIcon-WaterHere@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TabIcon-WaterHere@2x.png"; sourceTree = "<group>"; };
 		3AA0514B164FBA620009C7CA /* TabIcon-WaterMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TabIcon-WaterMap.png"; sourceTree = "<group>"; };
 		3AA0514C164FBA620009C7CA /* TabIcon-WaterMap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TabIcon-WaterMap@2x.png"; sourceTree = "<group>"; };
+		3AA05180164FD19C0009C7CA /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		3AA05181164FD19C0009C7CA /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 		3AD6D057164E5CD000AFECEC /* WaterQuality.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaterQuality.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AD6D05B164E5CD000AFECEC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3AD6D05D164E5CD000AFECEC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -351,6 +354,8 @@
 		3AD6D0A8164E671A00AFECEC /* Third Parties */ = {
 			isa = PBXGroup;
 			children = (
+				3AA05180164FD19C0009C7CA /* UIColor+Hex.h */,
+				3AA05181164FD19C0009C7CA /* UIColor+Hex.m */,
 				3AF72760164FA00100B2692B /* SVHTTPRequest */,
 				3AD6D0AA164E6ACB00AFECEC /* SVHTTPRequest */,
 			);
@@ -589,6 +594,7 @@
 				3AF72766164FA01D00B2692B /* SVHTTPRequest.m in Sources */,
 				15D824B3164FB4B1000B6DE4 /* WQAnotation.m in Sources */,
 				15D824BD164FBA01000B6DE4 /* WQDisplayDetailsSegue.m in Sources */,
+				3AA05182164FD19C0009C7CA /* UIColor+Hex.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
