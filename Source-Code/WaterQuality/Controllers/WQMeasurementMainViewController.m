@@ -10,6 +10,8 @@
 #import "WQWebServiceManager.h"
 #import "WQFuelLikeIndicatorView.h"
 #import "WQMeasurementDetailsViewController.h"
+//#import "UIViewController+LoadingScreen.h"
+
 
 #define kPERCENT_LABEL_RED_LABEL_LIMIT 20
 #define kPERCENT_LABEL_ORANGE_LABEL_LIMIT 40
@@ -22,7 +24,7 @@
 -(void)setIconImageForCode:(NSInteger)code;
 -(void)setPercentLabelForPercentage:(NSInteger)percentage;
 
-
+-(void)requestMeasurementForLocation: (CLLocation *)location;
 
 @end
 
@@ -83,7 +85,7 @@
     
     int indexForColorLabel = lroundf(percentage / (100 / [colorsForLabel count]));
     
-    self.persentLabel.textColor = [colorsForLabel objectAtIndex:indexForColorLabel];
+//    self.persentLabel.textColor = [colorsForLabel objectAtIndex:indexForColorLabel];
 }
 
 -(void)setIconImageForCode:(NSInteger)code
@@ -144,35 +146,34 @@
 -(void)receivedWebServiceManagerNotification:(NSNotification *)notification
 {
     
-    
+//    [self hideLoadingScreen];
     NSLog(@"So this is the response: %@", notification.userInfo);
     [self updateUserInterfaceWithMeasurement:notification.userInfo];
 }
 
-
+-(void)requestMeasurementForLocation:(CLLocation *)location
+{
+//    [self showLoadingScreen];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(receivedWebServiceManagerNotification:)
+                                                 name:K_NOTIFICATION_MEASHUREMENT_FOR_LOCATION_COMPLETE
+                                               object:nil];
+    
+    [[WQWebServiceManager sharedWebServiceManager] getMeasurementForLocation:location];
+}
 
 #pragma mark - LocationManager
 
 - (void)locationManager:(CLLocationManager *)manager
     didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 {
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(receivedWebServiceManagerNotification:)
-                                                 name:K_NOTIFICATION_MEASHUREMENT_FOR_LOCATION_COMPLETE
-                                               object:nil];
-    
-    [[WQWebServiceManager sharedWebServiceManager] getMeasurementForLocation:newLocation];
-    
+    [self requestMeasurementForLocation:newLocation];
 }
 
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(receivedWebServiceManagerNotification:)
-                                                 name:K_NOTIFICATION_MEASHUREMENT_FOR_LOCATION_COMPLETE
-                                               object:nil];
-    
-    [[WQWebServiceManager sharedWebServiceManager] getMeasurementForLocation:[locations lastObject]];
+    [self requestMeasurementForLocation:[locations lastObject]];
 }
 
 

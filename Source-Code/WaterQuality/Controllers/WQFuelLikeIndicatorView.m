@@ -8,12 +8,12 @@
 
 #import "WQFuelLikeIndicatorView.h"
 #import <QuartzCore/QuartzCore.h>
-
+#import "UIColor+Hex.h"
 
 #define kFUEL_INDICATOR_BASE_TAG 5678
 #define kNUMBER_OF_BARS 5
-#define kDISTANCE_BETWEEN_BARS_HORIZONTAL 10
-#define kBARS_HEIGHT 30
+#define kDISTANCE_BETWEEN_BARS_HORIZONTAL 13
+#define kBARS_HEIGHT 27
 
 @implementation WQFuelLikeIndicatorView
 
@@ -29,7 +29,7 @@
             newBar.tag = kFUEL_INDICATOR_BASE_TAG + i;
             newBar.layer.cornerRadius = 7;
             newBar.layer.masksToBounds = YES;
-            newBar.backgroundColor = [UIColor colorWithWhite:0.3 alpha:0.35];
+            newBar.backgroundColor = [UIColor colorWithWhite:0.3 alpha:0.15];
             [self addSubview:newBar];
             
             [newBar release];
@@ -44,7 +44,12 @@
 {
     int numberOfBarsToColor = lroundf(percentage/(100/self.subviews.count));
     
-    NSArray *colorsForBars = [NSArray arrayWithObjects: [UIColor greenColor], [UIColor greenColor],  [UIColor yellowColor], [UIColor orangeColor], [UIColor redColor] , nil];
+    NSArray *colorsForBars = [NSArray arrayWithObjects: [UIColor colorWithHexString:@"E7F4FB"],
+                              [UIColor colorWithHexString:@"8CCEF0"],
+                              [UIColor colorWithHexString:@"32A8E5"],
+                              [UIColor colorWithHexString:@"136E9D"],
+                              [UIColor colorWithHexString:@"082E42"],
+                              nil];
     
     for (int i = kNUMBER_OF_BARS-1 ; i >= kNUMBER_OF_BARS - numberOfBarsToColor ; i--)
     {

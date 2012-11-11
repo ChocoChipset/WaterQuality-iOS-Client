@@ -38,6 +38,7 @@
 		3AA0514F164FBA620009C7CA /* TabIcon-WaterMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AA0514B164FBA620009C7CA /* TabIcon-WaterMap.png */; };
 		3AA05150164FBA620009C7CA /* TabIcon-WaterMap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AA0514C164FBA620009C7CA /* TabIcon-WaterMap@2x.png */; };
 		3AA05182164FD19C0009C7CA /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA05181164FD19C0009C7CA /* UIColor+Hex.m */; };
+		3AA05186164FD6A90009C7CA /* UIViewController+LoadingScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA05185164FD6A90009C7CA /* UIViewController+LoadingScreen.m */; };
 		3AD6D05C164E5CD000AFECEC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD6D05B164E5CD000AFECEC /* UIKit.framework */; };
 		3AD6D05E164E5CD000AFECEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD6D05D164E5CD000AFECEC /* Foundation.framework */; };
 		3AD6D060164E5CD000AFECEC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD6D05F164E5CD000AFECEC /* CoreGraphics.framework */; };
@@ -115,6 +116,8 @@
 		3AA0514C164FBA620009C7CA /* TabIcon-WaterMap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TabIcon-WaterMap@2x.png"; sourceTree = "<group>"; };
 		3AA05180164FD19C0009C7CA /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
 		3AA05181164FD19C0009C7CA /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		3AA05184164FD6A90009C7CA /* UIViewController+LoadingScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+LoadingScreen.h"; sourceTree = "<group>"; };
+		3AA05185164FD6A90009C7CA /* UIViewController+LoadingScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LoadingScreen.m"; sourceTree = "<group>"; };
 		3AD6D057164E5CD000AFECEC /* WaterQuality.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaterQuality.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AD6D05B164E5CD000AFECEC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3AD6D05D164E5CD000AFECEC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -193,6 +196,8 @@
 		159E2D72164E6C260087CA15 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3AA05184164FD6A90009C7CA /* UIViewController+LoadingScreen.h */,
+				3AA05185164FD6A90009C7CA /* UIViewController+LoadingScreen.m */,
 				3AD6D0C6164E72C500AFECEC /* Closest Measurement */,
 				3AD6D0C5164E72AB00AFECEC /* Measurements */,
 			);
@@ -595,6 +600,7 @@
 				15D824B3164FB4B1000B6DE4 /* WQAnotation.m in Sources */,
 				15D824BD164FBA01000B6DE4 /* WQDisplayDetailsSegue.m in Sources */,
 				3AA05182164FD19C0009C7CA /* UIColor+Hex.m in Sources */,
+				3AA05186164FD6A90009C7CA /* UIViewController+LoadingScreen.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

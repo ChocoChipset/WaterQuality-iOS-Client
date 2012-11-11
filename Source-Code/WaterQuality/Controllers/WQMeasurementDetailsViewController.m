@@ -8,6 +8,9 @@
 
 #import "WQMeasurementDetailsViewController.h"
 #import "WQWebServiceManager.h"
+#import "UIViewController+LoadingScreen.h"
+
+
 @interface WQMeasurementDetailsViewController ()
 
 @property (nonatomic, retain) NSArray *listOfKeysAndValues;
@@ -45,7 +48,7 @@
                                                  name:K_NOTIFICATION_MEASHUREMENT_PARAMETERFOR_LOCATION_COMPLETE
                                                object:nil];
 
-    
+//    [self showLoadingScreen];
     [[WQWebServiceManager sharedWebServiceManager] getDetailsForMeasurementID:self.measurementID];
     
     
@@ -54,6 +57,7 @@
 
 -(void)updateUserInterfaceWithMeasurementDetails:(NSArray *)measurementsArray
 {
+//    [self hideLoadingScreen];
     self.listOfKeysAndValues = measurementsArray;
     [self.tableView reloadData];
     
