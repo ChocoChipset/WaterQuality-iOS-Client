@@ -35,4 +35,21 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(UIImage *)mapIconForMeasurementWithCode:(NSInteger)theCode
+{
+    NSString *iconImageName = @"CodeIcon_0";
+    
+    if (theCode == 0)
+    {
+        
+    }
+    else
+    {
+        NSLog(@"Warning: Unrecognized Code Image");
+    }
+    
+    return [UIImage imageNamed:iconImageName];
+    
+}
+
 @end
