@@ -9,6 +9,7 @@
 #import "WQDisplayDetailsSegue.h"
 #import "WQMeasurementMainViewController.h"
 #import "WQMeasurementsMapViewController.h"
+#import "WQMeasurementsListViewController.h"
 
 @implementation WQDisplayDetailsSegue
 
@@ -16,8 +17,11 @@
 {
     WQMeasurementMainViewController *destination = self.destinationViewController;
     WQMeasurementsMapViewController *source = self.sourceViewController;
+    if ([self.sourceViewController isMemberOfClass:[WQMeasurementsListViewController class]])
+        destination.displayedMeasurement = ((WQMeasurementsListViewController *)source).currentMeasurement;
+    else
+        destination.displayedMeasurement = ((WQMeasurementsMapViewController *)source).currentMeasurement;
     destination.dontCalculateUserLocation = YES;
-    destination.displayedMeasurement = source.currentMeasurement;
     [source.navigationController pushViewController:destination animated:YES];
 }
 

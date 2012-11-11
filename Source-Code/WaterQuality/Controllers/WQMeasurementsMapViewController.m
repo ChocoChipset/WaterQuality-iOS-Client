@@ -51,6 +51,19 @@
     [self putPins:[sender userInfo]];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(listOfMeasurementsComplete:)
+                                                 name:K_NOTIFICATION_MEASHUREMENTS_LIST_COMPLETE
+                                               object:nil];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 #pragma mark - MKMapViewDelegate methods
 
 - (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated

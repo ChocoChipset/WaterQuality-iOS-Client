@@ -7,6 +7,7 @@
 //
 
 #import "WQMeasurementsListViewController.h"
+#import "WQWebServiceManager.h"
 
 @interface WQMeasurementsListViewController ()
 
@@ -22,9 +23,38 @@
     [super dealloc];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(listOfMeasurementsComplete:)
+                                                 name:K_NOTIFICATION_MEASHUREMENTS_LIST_COMPLETE
+                                               object:nil];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [[WQWebServiceManager sharedWebServiceManager] getListOfMeasurementsForLocation:[[CLLocation alloc] initWithLatitude:self.point.latitude longitude:self.point.longitude]
+                                                               withinRadioLongitude:self.longitudeDelta
+                                                                withinRadioLatitude:self.longitudeDelta
+                                                                    resultLimitedTo:kDEFAULT_LIMIT_FOR_MEASUREMENTS
+                                                                    notificationKey:K_NOTIFICATION_MEASHUREMENTS_LIST_COMPLETE];
+}
+
+- (void)listOfMeasurementsComplete:(NSNotification *)notification
+{
+    self.dataSource = [[notification userInfo] objectForKey:@"objects"];
+    self.dataSource = [[NSMutableArray arrayWithArray:self.dataSource] sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        NSString *name1 = [obj1 objectForKey:@"locationName"];
+        NSString *name2 = [obj2 objectForKey:@"locationName"];
+        return [name1 compare:name2];
+    }];
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -37,22 +67,33 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
-    return 0;
+
+    return self.dataSource.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    // Configure the cell...
+    if (!cell)
+    {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    NSLog(@"%@",indexPath);
+    NSDictionary *currentMesure = [self.dataSource objectAtIndex:indexPath.row];
+    
+    UIImageView *image = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
+    image.contentMode = UIViewContentModeScaleAspectFit;
+    image.image = [self listIconForMeasurementWithCode:[[currentMesure objectForKey:@"code"] integerValue]];
+    cell.imageView.image = [self listIconForMeasurementWithCode:[[currentMesure objectForKey:@"code"] integerValue]];
+    cell.textLabel.text = [currentMesure objectForKey:@"locationName"];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
 }
@@ -80,34 +121,16 @@
 }
 */
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
+
+
 
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     [detailViewController release];
-     */
+    self.currentMeasurement = [self.dataSource objectAtIndex:indexPath.row];
+    [self performSegueWithIdentifier:@"ShowDetailsAboutMeasurementsFromList" sender:self];
 }
 
 @end

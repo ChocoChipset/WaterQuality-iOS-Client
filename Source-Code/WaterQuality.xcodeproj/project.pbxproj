@@ -13,6 +13,7 @@
 		159E2DA3164EB6090087CA15 /* icon@2x.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 159E2DA2164EB6090087CA15 /* icon@2x.PNG */; };
 		15D824B3164FB4B1000B6DE4 /* WQAnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D824B2164FB4B1000B6DE4 /* WQAnotation.m */; };
 		15D824BD164FBA01000B6DE4 /* WQDisplayDetailsSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D824BC164FBA01000B6DE4 /* WQDisplayDetailsSegue.m */; };
+		15D824D3164FDD6B000B6DE4 /* WQDisplayListOfPoints.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D824D2164FDD6B000B6DE4 /* WQDisplayListOfPoints.m */; };
 		3A664B64164FA93F00A9BD39 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A664B63164FA93F00A9BD39 /* Icon.png */; };
 		3A664B67164FA94900A9BD39 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A664B66164FA94900A9BD39 /* Icon@2x.png */; };
 		3A664B69164FA95900A9BD39 /* ItunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A664B68164FA95900A9BD39 /* ItunesArtwork.png */; };
@@ -89,6 +90,8 @@
 		15D824B2164FB4B1000B6DE4 /* WQAnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQAnotation.m; sourceTree = "<group>"; };
 		15D824BB164FBA01000B6DE4 /* WQDisplayDetailsSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQDisplayDetailsSegue.h; sourceTree = "<group>"; };
 		15D824BC164FBA01000B6DE4 /* WQDisplayDetailsSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQDisplayDetailsSegue.m; sourceTree = "<group>"; };
+		15D824D1164FDD6B000B6DE4 /* WQDisplayListOfPoints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQDisplayListOfPoints.h; sourceTree = "<group>"; };
+		15D824D2164FDD6B000B6DE4 /* WQDisplayListOfPoints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQDisplayListOfPoints.m; sourceTree = "<group>"; };
 		3A664B63164FA93F00A9BD39 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		3A664B66164FA94900A9BD39 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		3A664B68164FA95900A9BD39 /* ItunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ItunesArtwork.png; sourceTree = "<group>"; };
@@ -229,6 +232,8 @@
 			children = (
 				15D824BB164FBA01000B6DE4 /* WQDisplayDetailsSegue.h */,
 				15D824BC164FBA01000B6DE4 /* WQDisplayDetailsSegue.m */,
+				15D824D1164FDD6B000B6DE4 /* WQDisplayListOfPoints.h */,
+				15D824D2164FDD6B000B6DE4 /* WQDisplayListOfPoints.m */,
 			);
 			path = Segues;
 			sourceTree = "<group>";
@@ -378,10 +383,10 @@
 				3AD6D0BB164E723200AFECEC /* WQMeasurementsFilterViewController.h */,
 				3AD6D0BC164E723200AFECEC /* WQMeasurementsFilterViewController.m */,
 				3AD6D0BF164E728300AFECEC /* WQMeasurementsListViewController.h */,
+				3AD6D0DE164E820400AFECEC /* WQMeasurementsAbstractViewController.h */,
 				3AD6D0C0164E728300AFECEC /* WQMeasurementsListViewController.m */,
 				3AD6D0C2164E72A200AFECEC /* WQMeasurementsMapViewController.h */,
 				3AD6D0C3164E72A200AFECEC /* WQMeasurementsMapViewController.m */,
-				3AD6D0DE164E820400AFECEC /* WQMeasurementsAbstractViewController.h */,
 				3AD6D0DF164E820400AFECEC /* WQMeasurementsAbstractViewController.m */,
 			);
 			name = Measurements;
@@ -595,6 +600,7 @@
 				15D824B3164FB4B1000B6DE4 /* WQAnotation.m in Sources */,
 				15D824BD164FBA01000B6DE4 /* WQDisplayDetailsSegue.m in Sources */,
 				3AA05182164FD19C0009C7CA /* UIColor+Hex.m in Sources */,
+				15D824D3164FDD6B000B6DE4 /* WQDisplayListOfPoints.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
