@@ -47,9 +47,37 @@
      
 - (void)listOfMeasurementsComplete:(NSNotification *)sender
 {
-    NSDictionary *userInfo = [sender userInfo];
-    NSLog(@"%@",userInfo);
+    [self putPins:[sender userInfo]];
 }
+
+#pragma mark - MKMapViewDelegate methods
+
+- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
+{
+    CLLocation * point = [[[CLLocation alloc] initWithLatitude:self.map.centerCoordinate.latitude longitude:self.map.centerCoordinate.longitude] autorelease];
+    [[WQWebServiceManager sharedWebServiceManager] getListOfMeasurementsForLocation:point
+                                                               withinRadioLongitude:self.map.region.span.longitudeDelta
+                                                                withinRadioLatitude:self.map.region.span.latitudeDelta
+                                                                    resultLimitedTo:kDEFAULT_LIMIT_FOR_MEASUREMENTS
+                                                                    notificationKey:K_NOTIFICATION_MEASHUREMENTS_LIST_COMPLETE];
+}
+
+#pragma mark - pins oeration
+
+- (void)putPins:(NSDictionary *)data
+{
+    NSLog(@"%@",[data objectForKey:@"objects"]);
+    for (NSDictionary *object in [data objectForKey:@"objects"]) {
+        MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
+        annotation.coordinate = CLLocationCoordinate2DMake([((NSString *)[object objectForKey:@"latitude"]) doubleValue],
+                                                           [((NSString *)[object objectForKey:@"longitude"]) doubleValue]);
+        annotation.title = [object objectForKey:@"locationName"];
+        annotation.subtitle = [NSString stringWithFormat:@"%@%%",[object objectForKey:@"quality"] ];
+        [self.map addAnnotation:annotation];
+        [annotation release];
+    }
+}
+
 
 - (void)didReceiveMemoryWarning
 {
