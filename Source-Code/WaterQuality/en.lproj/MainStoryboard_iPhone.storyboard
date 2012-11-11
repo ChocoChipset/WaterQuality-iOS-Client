@@ -75,7 +75,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="My Water" image="TabIcon-WaterHere.png" id="ZQ5-rV-iLr"/>
                     <navigationItem key="navigationItem" id="3qS-ia-54D">
-                        <barButtonItem key="rightBarButtonItem" title="Details" id="B7p-Px-5PZ">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Details" id="B7p-Px-5PZ">
                             <connections>
                                 <action selector="presentMeasurementsDetails:" destination="t7v-BW-qGJ" id="chh-H9-vgM"/>
                             </connections>

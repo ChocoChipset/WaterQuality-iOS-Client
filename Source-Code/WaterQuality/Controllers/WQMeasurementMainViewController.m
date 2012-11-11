@@ -109,6 +109,8 @@
 {
     self.displayedMeasurement = dictionary;
     
+    self.navigationItem.rightBarButtonItem.enabled = YES;
+    
     int waterQualityPercentage = [[dictionary valueForKey:@"quality"] intValue];
     
     [self setIconImageForCode:[[dictionary valueForKey:@"code"] intValue]];
