@@ -81,16 +81,23 @@
         
         UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
         pinView.rightCalloutAccessoryView = rightButton;
-        if ([annotation isMemberOfClass:[WQAnotation class]]) {
-            UIImageView *image = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
-            image.contentMode = UIViewContentModeScaleAspectFit;
-            image.image = [self mapIconForMeasurementWithCode:((WQAnotation *)annotation).code];
-            pinView.leftCalloutAccessoryView = image;
-            [image release];
-        }
-    } else {
+
+    }
+    else
+    {
+
+
         pinView.annotation = annotation;
     }
+    if ([annotation isMemberOfClass:[WQAnotation class]])
+    {
+        UIImageView *image = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
+        image.contentMode = UIViewContentModeScaleAspectFit;
+        image.image = [self mapIconForMeasurementWithCode:((WQAnotation *)annotation).code];
+        pinView.leftCalloutAccessoryView = image;
+        [image release];
+    }
+    
     return pinView;
 }
 #pragma mark - pins oeration
