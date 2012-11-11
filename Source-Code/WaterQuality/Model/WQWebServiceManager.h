@@ -13,7 +13,8 @@ typedef void (^WQMeasurementsResponse)(id responseObject, NSError *error);
 
 @interface WQWebServiceManager : NSObject
 
-@property (assign, nonatomic) double radio;
+@property (assign, nonatomic) double radioLongitude;
+@property (assign, nonatomic) double radioLatitude;
 @property (strong, nonatomic) CLLocation *locationPoint;
 @property (strong, nonatomic) NSMutableArray *measurements;
 @property (strong, nonatomic) NSDictionary *parameters;
@@ -24,9 +25,15 @@ typedef void (^WQMeasurementsResponse)(id responseObject, NSError *error);
 
 - (void)getParameterForMeasurementID:(long)measurement;
 
-- (void)getListOfMeasurementsForLocation:(CLLocation *)location
+/*- (void)getListOfMeasurementsForLocation:(CLLocation *)location
                              withinRadio:(NSInteger)radioInMeters
-                         resultLimitedTo:(NSInteger)limit;
+                         resultLimitedTo:(NSString *)limit;*/
+
+- (void)getListOfMeasurementsForLocation:(CLLocation *)location
+                    withinRadioLongitude:(double)degreesLongitude
+                     withinRadioLatitude:(double)degreesLatitude
+                         resultLimitedTo:(NSString*)limit
+                         notificationKey:(NSString *)notificationKey;
 
 
 @end

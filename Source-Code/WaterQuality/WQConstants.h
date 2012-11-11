@@ -9,13 +9,17 @@
 
 // Web Services Defaults:
 /* ------------------------------------------------------------------------- */
-#define kWEB_SERVICE_BASE_URL @"http://192.168.3.179:8000"
+#define kWEB_SERVICE_BASE_URL @"http://192.168.3.107:8000"
 /* ------------------------------------------------------------------------- */
 
 
 // Default settings for Maps
 /* ------------------------------------------------------------------------- */
-#define kRADIO_BY_DEFAULT_DEGREE 0
+
+#define kRADIO_BY_DEFAULT_DEGREE_ZERO 0
+
+#define kRADIO_BY_DEFAULT_DEGREE 0.3
+
 #define kDEFAULT_LATITUDE_ 52.2297
 #define kDEFAULT_LONGITUDE_ 21.0122
 /* ------------------------------------------------------------------------- */
