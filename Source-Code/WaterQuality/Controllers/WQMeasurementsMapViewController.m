@@ -65,7 +65,9 @@
 
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
 {
-    [self performSegueWithIdentifier:@"ShowDetailsAboutMeasurements" sender:self];
+    self.currentMeasurement = ((WQAnotation *)[self.map.selectedAnnotations objectAtIndex:0]).measurement;
+    NSLog (@"%@",self.currentMeasurement);
+    [self performSegueWithIdentifier:@"ShowDetailsAboutMeasurementsFromMap" sender:self];
 }
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
@@ -88,10 +90,6 @@
         }
     } else {
         pinView.annotation = annotation;
-    }
-    if ([annotation isMemberOfClass:[WQAnotation class]])
-    {
-        self.currentMeasurement = ((WQAnotation *)annotation).measurement;
     }
     return pinView;
 }
@@ -136,6 +134,7 @@
             annotation.title = [object objectForKey:@"locationName"];
             annotation.subtitle = [NSString stringWithFormat:@"%@%%",[object objectForKey:@"quality"]];
             annotation.code = [[object objectForKey:@"code"] integerValue];
+            annotation.measurement = object;
             [self.map addAnnotation:annotation];
             [annotation release];
         }

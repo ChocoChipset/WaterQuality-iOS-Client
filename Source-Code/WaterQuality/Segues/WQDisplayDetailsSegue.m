@@ -17,7 +17,8 @@
     WQMeasurementMainViewController *destination = self.destinationViewController;
     WQMeasurementsMapViewController *source = self.sourceViewController;
     destination.dontCalculateUserLocation = YES;
-    [destination updateUserInterfaceWithMeasurement:source.currentMeasurement];
+    destination.displayedMeasurement = source.currentMeasurement;
+    [source.navigationController pushViewController:destination animated:YES];
 }
 
 @end

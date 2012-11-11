@@ -102,7 +102,8 @@
         CLLocationManager *locationManager = [[CLLocationManager alloc] init];
         locationManager.delegate = self;
         [locationManager startMonitoringSignificantLocationChanges];
-    }
+    }else
+        [self updateUserInterfaceWithMeasurement:self.displayedMeasurement];
     
 	// Do any additional setup after loading the view.
 }
