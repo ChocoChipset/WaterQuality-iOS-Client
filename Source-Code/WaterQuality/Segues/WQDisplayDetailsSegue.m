@@ -15,7 +15,7 @@
 {
     WQMeasurementMainViewController *destination = self.destinationViewController;
     destination.dontCalculateUserLocation = YES;
-    [destination updateViewConstraints]
+//    [destination updateUserInterfaceWithMeasurement:<#(NSDictionary *)#>];
 }
 
 @end
